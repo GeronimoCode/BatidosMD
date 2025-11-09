@@ -1,0 +1,388 @@
+:root {
+  --carta1-color: #f2a0cd;
+  --carta2-color: #f25ee8;
+  --carta3-color: #49f2b4;
+  --carta4-color: #91f2c5;
+  --carta5-color: #8c4820;
+  --carta6-color: #8c4608;
+  --carta7-color: #b86abe;
+  --carta8-color: #a154a5;
+  --carta9-color: #93437d;
+}
+
+/* !PRIMER APARTADO: HEADER CON NAV */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fee5f0;
+  /* background-color: #efefef; */
+  margin: 0;
+  padding: 0;
+  /* width: 100%;
+    height: 100%; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 5px;
+  background: linear-gradient(
+    to right,
+    var(--carta2-color),
+    var(--carta1-color)
+  );
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 125px;
+}
+
+
+.logo {
+  margin-right: auto;
+  filter: saturate(1.2);
+  filter: drop-shadow(0 0 0.75rem var(--carta7-color-color));
+  /* Asegura que el logo permanezca a la izquierda */
+}
+
+.CENTRAR {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente los enlaces */
+  gap: 110px;
+  /* filter: drop-shadow(0 0 0.75rem var(--carta3-color)); */
+  /* Espacio entre los enlaces */
+  flex-grow: 4;
+  /* Permite al menú ocupar todo el espacio restante */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+a:hover {
+  color: var(--carta3-color);
+  /* Color en hover */
+  transition: color 0.3s ease;
+}
+
+header h1 {
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fff;
+}
+
+/*! APARTADO 3 CARDS  */
+
+.menu {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  font-size: 24px;
+  color: var(--carta8-color);
+}
+
+.intro p {
+  font-size: 16px;
+  color: var(--carta9-color);
+}
+
+.menu h2 {
+  font-size: 24px;
+  color: var(--carta7-color);
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.card {
+  width: 290px;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  filter: saturate(1.2);
+}
+
+.card p {
+  font-size: 16px;
+}
+/* 
+@media (max-width: 600px) {
+
+  .card {
+    border-radius: 50%;
+    background-color: #000;
+  }
+
+} */
+
+
+/*! SEGUNDO APARTADO: CARRUSEL */ /* Estilo basico para la galeria */
+
+figure {
+  margin: 0;
+}
+#gallery {
+  border-radius: 8px;
+  width: 950px;
+  height: 900px;
+  margin: 0 auto; /* max-width: 400px; */
+  overflow: hidden;
+  position: relative; /* necesario para los botones de navegación */
+}
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100vh;
+} /* Navegacion de la galeria */
+.gallery-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--carta2-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.nav-button > span {
+  font-size: 30px;
+}
+.nav-button:hover {
+  background-color: var(--carta1-color);
+}
+
+/* -------------------------------- */
+/* 📱 Responsive Design */
+/* -------------------------------- */
+
+/* ✅ Móviles (hasta 600px) */
+@media (max-width: 600px) {
+  #gallery {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+  }
+
+  .gallery-item img {
+    height: 250px;
+  }
+
+  .nav-button {
+    padding: 6px 10px;
+  }
+
+  .nav-button > span {
+    font-size: 20px;
+  }
+
+  .gallery-navigation {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+}
+
+/* ✅ Tablets (601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #gallery {
+    width: 90%;
+    height: 500px;
+  }
+
+  .gallery-item img {
+    height: 500px;
+  }
+
+  .nav-button {
+    padding: 8px 15px;
+  }
+
+  .nav-button > span {
+    font-size: 25px;
+  }
+}
+
+/* ✅ Escritorios grandes (más de 1025px) */
+@media (min-width: 1025px) {
+  #gallery {
+    width: 950px;
+    height: 900px;
+  }
+
+  .gallery-item img {
+    height: 100vh;
+  }
+}
+
+/*! TERCER APARTADO: WAFLE CON BREVE DESCRIPCION */
+
+.waffle {
+  /* FONDO CAFE */
+  border-radius: 8px;
+  background-color: #8c4608;
+  padding: 10px;
+  margin: 20px auto;
+  height: 630px;
+
+  /* TODO LO QUE HAY DENTRO DEL MAIN */
+
+  .contenido {
+    display: flex;
+    align-items: start;
+    /* Centra verticalmente la imagen y el texto */
+    justify-content: space-around;
+    text-align: center;
+    /* Espacia uniformemente el texto y la imagen */
+    gap: 10%;
+    border-radius: 8px;
+
+    .texto h1 {
+      font-size: 38px;
+      color: rgb(255, 255, 255);
+      /*      1.TOP 2.RIGTH 3.BOTTOM 4.LEFT */
+      margin: 0 0 18% 0;
+      align-items: start;
+      /* padding: 5px 10px; */
+    }
+
+    p {
+      font-size: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+    }
+
+    img {
+      filter: saturate(1.2);
+      border-radius: 8px;
+      width: 350px;
+      height: 600px;
+    }
+  }
+}
+
+/*! CUARTO APRTADO: INSTRAGRAM Y TIKTOK */
+
+.instragram {
+  background-color: #fecce3;
+  color: black;
+  text-align: center;
+  height: 620px;
+  border-radius: 8px;
+
+  .contenido-fotos {
+    filter: saturate(1.3);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+
+    .PE1 {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      bottom: 80px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .N {
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+      position: relative;
+      width: 300px;
+      height: 450px;
+      top: 50px;
+    }
+
+    .PE2 {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      bottom: 80px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+/*! QUINTO APARTADO: FIN DE LA PAGINA WEB (FOOTER) */
+
+footer {
+  background-color: var(--carta7-color);
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer .redes-sociales {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+
+  .i1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .i2 {
+    text-align: center;
+  }
+
+  .i3 {
+    text-align: center;
+  }
+}
