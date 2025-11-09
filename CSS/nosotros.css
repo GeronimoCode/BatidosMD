@@ -28,23 +28,24 @@ h2 {
 
 .A-Nosotros {
     display: flex;
-    /* Habilita Flexbox */
-    flex-direction: row-reverse;
-    /* Alinea elementos en fila */
-    justify-content: space-between;
-    /* Espacio entre imagen y texto */
+    justify-content: center;
     align-items: center;
-    /* Alinea verticalmente */
-    gap: 15px;
+    /* Habilita Flexbox */
+    /* flex-direction: row-reverse; */
+    /* Alinea elementos en fila */
     /* Espacio entre imagen y texto */
-    padding: 25px;
+   
+    text-align: justify;
+    /* Alinea verticalmente */
+   
+    /* Espacio entre imagen y texto */
 }
 
 
 .imgnosotros {
-    width:90%;
-
+    display: flex;
+    width:450px;
     border-radius: 8px;
-    filter: saturate(1.1);
+    filter: saturate(1.2);
 
 }
