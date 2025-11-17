@@ -12,87 +12,111 @@
 
 /* !PRIMER APARTADO: HEADER CON NAV */
 
-html {
-  scroll-behavior: smooth;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #fee5f0;
-  /* background-color: #efefef; */
-  margin: 0;
-  padding: 0;
-  /* width: 100%;
-    height: 100%; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+ 
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 5px 5px;
-  background: linear-gradient(
-    to right,
-    var(--carta2-color),
-    var(--carta1-color)
-  );
+  gap: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, var(--carta2-color), var(--carta1-color));
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  /* height: 125px; */
+  font-weight: 900;
+  /* width: 100%; */
 }
 
-
+/* Logo */
 .logo {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  margin-right: auto;
-  filter: saturate(1.2);
-  filter: drop-shadow(0 0 0.75rem var(--carta7-color-color));
-  /* Asegura que el logo permanezca a la izquierda */
+  filter: saturate(1.2) drop-shadow(0 0 0.75rem var(--carta7-color-color));
 }
 
+/* Navigation */
 .CENTRAR {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Centra horizontalmente los enlaces */
-  gap: 110px;
-  /* filter: drop-shadow(0 0 0.75rem var(--carta3-color)); */
-  /* Espacio entre los enlaces */
-  flex-grow: 4;
-  /* Permite al menú ocupar todo el espacio restante */
+  gap: 40px;
+  flex-grow: 1;
 }
 
-a {
+.CENTRAR a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 21px;
-}
-
-a:hover {
-  color: var(--carta3-color);
-  /* Color en hover */
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
+.CENTRAR a:hover {
+  color: var(--carta3-color);
+}
+
+/* Title */
 header h1 {
-  font-size: 20px;
-  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
   font-weight: bold;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .CENTRAR {
+    gap: 20px;
+  }
+
+  .CENTRAR a {
+    font-size: 18px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CENTRAR {
+    flex-direction: column;
+  }
+
+  .CENTRAR a {
+    font-size: 16px;
+    font-weight: 900;
+  }
+}
+
+
+/*! APARTADO 3 CARDS  */
+
 
 main {
   padding: 20px;
   font-family: "Nunito Sans", sans-serif;
   background-color: #fff;
 }
-
-/*! APARTADO 3 CARDS  */
 
 .menu {
   text-align: center;
@@ -209,9 +233,10 @@ figure {
 @media (max-width: 600px) {
   #gallery {
     width: 100%;
-    height: 250px;
-    border-radius: 0;
+    height: 270px;
+    border-radius: 8px;
   }
+
 
   .gallery-item img {
     height: 250px;
@@ -266,6 +291,8 @@ figure {
 /*! TERCER APARTADO: WAFLE CON BREVE DESCRIPCION */
 
 .waffle {
+  display: flex;
+  flex-wrap: wrap;
   /* FONDO CAFE */
   border-radius: 8px;
   background-color: #8c4608;
@@ -311,6 +338,38 @@ figure {
     }
   }
 }
+
+/* 📱 Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+
+  .waffle {
+    padding: 15px;
+  }
+
+  .waffle .contenido {
+    flex-direction: column;         /* De lado a lado → ahora vertical */
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .waffle .contenido .texto h1 {
+    font-size: 28px;                /* Reduce el tamaño */
+    margin: 0;
+  }
+
+  .waffle .contenido p {
+    font-size: 16px;                /* Reduce para que no desborde */
+    padding: 0 10px;
+  }
+
+  .waffle .contenido img {
+    width: 80%;                     /* Imagen más proporcional */
+    height: auto;                   /* Evita deformación */
+    max-height: 400px;              /* Evita que sea enorme */
+  }
+}
+
 
 /*! CUARTO APRTADO: INSTRAGRAM Y TIKTOK */
 
