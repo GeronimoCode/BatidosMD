@@ -11,8 +11,6 @@ body {
     /* background-color: #efefef; */
     margin: 0;
     padding: 0;
-    /* width: 100%;
-    height: 100%; */
 }
 
 .h1 {
@@ -20,7 +18,7 @@ body {
     text-align: center;
     font-size: 28px;
 }
-   
+
 
 h2 {
     text-align: center;
@@ -28,19 +26,12 @@ h2 {
 }
 
 .A-Nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Habilita Flexbox */
-    /* flex-direction: row-reverse; */
-    /* Alinea elementos en fila */
-    /* Espacio entre imagen y texto */
-   
+    /* max-width: 900px; */
+    margin: 0 auto;
     text-align: justify;
-    /* Alinea verticalmente */
-   
-    /* Espacio entre imagen y texto */
+    padding: 20px;
 }
+
 
 
 .contenedor {
@@ -61,15 +52,16 @@ h2 {
 
 /* ! RESPONSIVE */
 
-@media (max-width: 530px) {
+@media (max-width: 600px) {
 
     .A-Nosotros {
-        padding: 0 20px;
         font-size: 13px;
+        padding: 0 20px;
+
     }
 
-    .img {
-        width: 220px;
+    .imgnosotros {
+        width: 280px;
     }
 
 }
