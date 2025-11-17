@@ -454,3 +454,14 @@ footer .redes-sociales {
     text-align: center;
   }
 }
+
+
+/* ! RESPONSIVE */
+
+@media (max-width: 530px) {
+
+  footer {
+    font-size: 20px;
+  }
+
+}

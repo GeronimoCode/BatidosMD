@@ -42,10 +42,33 @@ h2 {
 }
 
 
-.imgnosotros {
+.contenedor {
     display: flex;
-    width:450px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgnosotros {
+
+    width:410px;
     border-radius: 8px;
     filter: saturate(1.2);
 
 }
+
+
+/* ! RESPONSIVE */
+
+@media (max-width: 530px) {
+
+    .A-Nosotros {
+        font-size: 15px;
+    }
+
+    .img {
+        width: 250px;
+    }
+
+}
+
