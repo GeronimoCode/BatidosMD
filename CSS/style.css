@@ -34,11 +34,10 @@ header {
   padding: 10px 20px;
   background: linear-gradient(to right, var(--carta2-color), var(--carta1-color));
   color: white;
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1000; */
   font-weight: 900;
-  /* width: 100%; */
 }
 
 /* Logo */
@@ -46,7 +45,7 @@ header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  filter: saturate(1.2) drop-shadow(0 0 0.75rem var(--carta7-color-color));
+  filter: saturate(1.2) drop-shadow(0 0 0.75rem var(--carta7-color));
 }
 
 /* Navigation */
@@ -108,6 +107,24 @@ header h1 {
   }
 }
 
+.titulo {
+    text-align: center;
+    color: var(--carta2-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 530px) {
+
+  .titulo {
+    font-size: 22px;
+
+  }
+
+}
+
+
 
 /*! APARTADO 3 CARDS  */
 
@@ -164,16 +181,6 @@ main {
 .card p {
   font-size: 16px;
 }
-/* 
-@media (max-width: 600px) {
-
-  .card {
-    border-radius: 50%;
-    background-color: #000;
-  }
-
-} */
-
 
 /*! SEGUNDO APARTADO: CARRUSEL */ /* Estilo basico para la galeria */
 
@@ -182,12 +189,13 @@ figure {
 }
 #gallery {
   border-radius: 8px;
-  width: 950px;
-  height: 900px;
+  width: 750px;
+  height: 720px;
   margin: 0 auto; /* max-width: 400px; */
   overflow: hidden;
   position: relative; /* necesario para los botones de navegación */
 }
+
 .gallery-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -233,7 +241,7 @@ figure {
 @media (max-width: 600px) {
   #gallery {
     width: 100%;
-    height: 270px;
+    height:260px;
     border-radius: 8px;
   }
 
@@ -422,38 +430,42 @@ figure {
 
 footer {
   background-color: var(--carta7-color);
-  color: white;
+  color: #fff;
   font-weight: bold;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   font-size: 1.5em;
   margin-top: 20px;
+  border-top: 4px solid rgba(255,255,255,0.4);
+}
+
+.i:hover {
+  cursor: pointer;
+
 }
 
 footer a {
   color: white;
   text-decoration: none;
   font-size: 1em;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  
+}
+
+footer a:hover {
+  color: var(--carta5-color);
+  opacity: 0.7;
+  
 }
 
 footer .redes-sociales {
   margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-
-  .i1 {
-    position: relative;
-    text-align: center;
-  }
-
-  .i2 {
-    text-align: center;
-  }
-
-  .i3 {
-    text-align: center;
-  }
+  
 }
+
 
 
 /* ! RESPONSIVE */
