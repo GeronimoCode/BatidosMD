@@ -21,7 +21,6 @@
 body {
   background-color: #fee5f0;
   /* font-family: Arial, Helvetica, sans-serif; */
- 
 }
 
 /* Header */
@@ -32,7 +31,11 @@ header {
   flex-wrap: wrap;
   gap: 20px;
   padding: 10px 20px;
-  background: linear-gradient(to right, var(--carta2-color), var(--carta1-color));
+  background: linear-gradient(
+    to right,
+    var(--carta2-color),
+    var(--carta1-color)
+  );
   color: white;
   /* position: sticky;
   top: 0;
@@ -108,26 +111,44 @@ header h1 {
 }
 
 .titulo {
-    text-align: center;
-    color: var(--carta2-color);
-    font-size: 28px;
-    margin-bottom: 20px;
-    margin-top: 40px;
+  text-align: center;
+  color: var(--carta2-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 @media (max-width: 530px) {
-
   .titulo {
     font-size: 22px;
-
   }
+}
 
+/*! APARTADO CARTA */
+
+.carta-local {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 40px 0;
+  flex-wrap: wrap; /* clave para móviles */
+}
+
+.carta-local img {
+  width: 620px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.carta-local img:hover {
+  transform: scale(1.05);
 }
 
 
 
-/*! APARTADO 3 CARDS  */
-
+/*! APARTADO 3 CARDS */
 
 main {
   padding: 20px;
@@ -176,6 +197,11 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   filter: saturate(1.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.2);
 }
 
 .card p {
@@ -241,10 +267,9 @@ figure {
 @media (max-width: 600px) {
   #gallery {
     width: 100%;
-    height:260px;
+    height: 260px;
     border-radius: 8px;
   }
-
 
   .gallery-item img {
     height: 250px;
@@ -349,82 +374,81 @@ figure {
 
 /* 📱 Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
-
   .waffle {
     padding: 15px;
   }
 
   .waffle .contenido {
-    flex-direction: column;         /* De lado a lado → ahora vertical */
+    flex-direction: column; /* De lado a lado → ahora vertical */
     align-items: center;
     gap: 20px;
     text-align: center;
   }
 
   .waffle .contenido .texto h1 {
-    font-size: 28px;                /* Reduce el tamaño */
+    font-size: 28px; /* Reduce el tamaño */
     margin: 0;
   }
 
   .waffle .contenido p {
-    font-size: 16px;                /* Reduce para que no desborde */
+    font-size: 16px; /* Reduce para que no desborde */
     padding: 0 10px;
   }
 
   .waffle .contenido img {
-    width: 80%;                     /* Imagen más proporcional */
-    height: auto;                   /* Evita deformación */
-    max-height: 400px;              /* Evita que sea enorme */
+    width: 80%; /* Imagen más proporcional */
+    height: auto; /* Evita deformación */
+    max-height: 400px; /* Evita que sea enorme */
   }
 }
-
 
 /*! CUARTO APRTADO: INSTRAGRAM Y TIKTOK */
 
 .instragram {
-
   background-color: #fecce3;
   color: black;
   text-align: center;
-  /* height: 620px; */
   border-radius: 8px;
-  
-
-  .contenido-fotos {
-    display: flex;
-    filter: saturate(1.3);
-    display: flex;
-    justify-content: space-around;
-    gap: 25px;
-    flex-wrap: wrap;
-    align-items: center;
-
-
-    .PE1 {
-      display: flex;
-      width: 300px;
-      height: 250px;
-      bottom: 80px;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
-    }
-
-    .N {
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
-      display: flex;
-      width: 300px;
-      height: 450px;
-      top: 50px;
-    }
-
-    .PE2 {
-    display: flex;
-      width: 300px;
-      height: 250px;
-      bottom: 80px;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
-    }
-  }
 }
+
+/* CONTENEDOR */
+.instragram .contenido-fotos {
+  display: flex;
+  filter: saturate(1.3);
+  justify-content: space-around;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* IMÁGENES PEQUEÑAS */
+.instragram .contenido-fotos .PE1,
+.instragram .contenido-fotos .PE2 {
+  display: flex;
+  width: 300px;
+  height: 250px;
+  bottom: 80px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* IMAGEN GRANDE */
+.instragram .contenido-fotos .N {
+  display: flex;
+  width: 300px;
+  height: 450px;
+  top: 50px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.PE1:hover,
+.PE2:hover,
+.N:hover {
+  transform: scale(1.2);
+}
+
 
 /*! QUINTO APARTADO: FIN DE LA PAGINA WEB (FOOTER) */
 
@@ -436,26 +460,25 @@ footer {
   text-align: center;
   font-size: 1.5em;
   margin-top: 20px;
-  border-top: 4px solid rgba(255,255,255,0.4);
+  border-top: 4px solid rgba(255, 255, 255, 0.4);
 }
 
 .i:hover {
   cursor: pointer;
-
 }
 
 footer a {
   color: white;
   text-decoration: none;
   font-size: 1em;
-  transition: color 0.3s ease, opacity 0.3s ease;
-  
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 footer a:hover {
   color: var(--carta5-color);
   opacity: 0.7;
-  
 }
 
 footer .redes-sociales {
@@ -463,17 +486,12 @@ footer .redes-sociales {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
 }
-
-
 
 /* ! RESPONSIVE */
 
 @media (max-width: 530px) {
-
   footer {
     font-size: 20px;
   }
-
 }
