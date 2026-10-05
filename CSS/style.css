@@ -549,3 +549,15 @@ footer .redes-sociales {
     font-size: 20px;
   }
 }
+
+
+.animacion-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animacion-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

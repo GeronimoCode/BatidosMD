@@ -39,3 +39,38 @@ startAutoplay(3000);
 document.querySelectorAll('.nav-button').forEach(button => {
   button.addEventListener('click', stopAutoplay);
 });
+
+
+/* Animación al hacer scroll */
+
+const elementos = document.querySelectorAll("section");
+
+const observador = new IntersectionObserver(function(elementosVisibles) {
+
+    elementosVisibles.forEach(function(elemento) {
+
+        if (elemento.isIntersecting) {
+
+            elemento.target.classList.add("visible");
+
+        } else {
+
+            elemento.target.classList.remove("visible");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+
+elementos.forEach(function(elemento) {
+
+    elemento.classList.add("animacion-scroll");
+
+    observador.observe(elemento);
+
+});
+
