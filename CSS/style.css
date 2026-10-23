@@ -212,6 +212,53 @@ main {
 .menu {
   text-align: center;
 }
+/* Base de los botones de pedir */
+.btn-pedir {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 18px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.card:hover .btn-pedir {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* --- COLORES ARMÓNICOS PARA CADA TARJETA --- */
+
+/* 1. Botón para la tarjeta de Chocolate / Café */
+.btn-chocolate {
+    background-color: #6b3e26; /* Tono café chocolate oscuro */
+    border: 2px solid #4a2817;
+}
+
+/* 2. Botón para la tarjeta de Fresa */
+.btn-fresa {
+    background-color: #be2fa6; /* Tono rosado/fresa intenso */
+    border: 2px solid #c22540;
+}
+
+/* 3. Botón para la tarjeta de Espinaca / Verde */
+.btn-espinaca {
+    background-color: #2d8a4e; /* Tono verde botánico */
+    border: 2px solid #1e6136;
+}
+
+/* 4. Botón para la tarjeta de Salpicón (Naranja) */
+.btn-salpicon {
+    background-color: #e65100; /* Naranja cítrico intenso */
+    border: 2px solid #bf360c;
+}
+
 
 .intro {
   text-align: center;
@@ -502,6 +549,164 @@ figure {
 .N:hover {
   transform: scale(1.1);
 }
+
+/* --- SECCIÓN DE RESEÑAS --- */
+.resenas-section {
+    padding: 40px 20px;
+    background-color: #fff9f5; /* Fondo crema suave muy fresco */
+    border-top: 3px dashed #ffd1b3;
+    border-bottom: 3px dashed #ffd1b3;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.titulo-resenas {
+    color: #e63956; /* Tono frutal/rojo que usas en el sitio */
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.resenas-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*! Tarjetas individuales de reseñas */
+
+.resenas-section {
+    padding: 40px 20px;
+    background-color: var(--carta4-color); /* MENTAS FRESCO SUAVE */
+    border-top: 4px none var(--carta3-color);
+    border-bottom: 4px none var(--carta3-color);
+    margin: 40px 0;
+    text-align: center;
+}
+
+.titulo-resenas {
+    color: var(--carta6-color); /* CAFE INTENSO */
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.resenas-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjetas individuales de reseñas */
+.resena-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--carta1-color); /* ROSADO SUAVE */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resena-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Header de la reseña (Avatar y Nombre) */
+.resena-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* Avatares con tus tonos magenta/rosa */
+.avatar-nicolas {
+    width: 42px;
+    height: 42px;
+    background-color: var(--carta2-color); /* MAGENTA INTENSO */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-daniela {
+    width: 42px;
+    height: 42px;
+    background-color: var(--carta7-color); /* PURPURA / MORADO */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usuario-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--carta5-color); /* CAFE OSCURO */
+    font-weight: bold;
+}
+
+.badge-guide {
+    font-size: 11px;
+    color: #ffffff;
+    background-color: var(--carta8-color); /* MORADO GUIA */
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.estrellas {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.comentario {
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Botón inferior para ir a Google */
+.google-callout {
+    margin-top: 25px;
+}
+
+.btn-google-opinion {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--carta2-color); /* MAGENTA */
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 2px solid var(--carta9-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-google-opinion:hover {
+    background-color: var(--carta9-color); /* TONO OSCURO AL PASAR EL MOUSE */
+    transform: scale(1.04);
+}
+
+
 
 
 /*! QUINTO APARTADO: FIN DE LA PAGINA WEB (FOOTER) */

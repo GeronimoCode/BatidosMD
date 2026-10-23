@@ -116,38 +116,53 @@
         
         <br>
 
-        <section class="menu">
+      <section class="menu">
+    <h2>Nuestros Sabores</h2>
+    <br>
+    <div class="card-container">
 
-            <h2>Nuestros Sabores</h2>
-            <br>
-
-            <div class="card-container">
-
-                <div class="card" style="background-color: var(--carta5-color);">
-                    <img src="./IMAGENES/Otros/Cafe Especial.jpg" width="285" height="468">
-                    <h3>Chocolate</h3>
-                    <p>Delicioso granizado de cafe puro.</p>
-                </div>
-
-
-                <div class="card" style="background-color: var(--carta2-color);">
-
-                    <img src="./IMAGENES/Malteadas/Malteada de fresa.jpeg" width="285" height="468px">
-
-                    <h3>Fresa</h3>
-
-                    <p>Malteada de Fresa.</p>
-                </div>
-
-                <div class="card" style="background-color: var(--carta3-color);">
-                    <img src="./IMAGENES/Batidos/Batido verde fuerte.jpeg" width="285" height="470px">
-                    <h3>Espinaca</h3>
-                    <p>Batido verde.</p>
-                </div>
-
-
+        <!-- TARJETA 1: Chocolate / Café -->
+        <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Granizado%20de%20Caf%C3%A9%20Especial" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card" style="background-color: var(--carta5-color); cursor: pointer;">
+                <img src="./IMAGENES/Otros/Cafe Especial.jpg" width="285" height="468" alt="Café Especial">
+                <h3>Chocolate</h3>
+                <p>Delicioso granizado de café puro.</p>
+                <span class="btn-pedir btn-chocolate">🍨 Pedir por WhatsApp</span>
             </div>
-        </section>
+        </a>
+
+        <!-- TARJETA 2: Malteada de Fresa -->
+        <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20Malteada%20de%20Fresa" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card" style="background-color: var(--carta2-color); cursor: pointer;">
+                <img src="./IMAGENES/Malteadas/Malteada de fresa.jpeg" width="285" height="468px" alt="Malteada de Fresa">
+                <h3>Fresa</h3>
+                <p>Malteada de Fresa.</p>
+                <span class="btn-pedir btn-fresa">🍨 Pedir por WhatsApp</span>
+            </div>
+        </a>
+
+        <!-- TARJETA 3: Batido Verde -->
+        <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Batido%20Verde%20de%20Espinaca" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card" style="background-color: var(--carta3-color); cursor: pointer;">
+                <img src="./IMAGENES/Batidos/Batido verde fuerte.jpeg" width="285" height="470px" alt="Batido verde">
+                <h3>Espinaca</h3>
+                <p>Batido verde.</p>
+                <span class="btn-pedir btn-espinaca">🍨 Pedir por WhatsApp</span>
+            </div>
+        </a>
+
+        <!-- TARJETA 4: Salpicón -->
+        <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Salpic%C3%B3n" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card" style="background-color: #ff9800; cursor: pointer;">
+                <img src="./IMAGENES/Helado/Salpicon especial.jpg" width="285" height="468px" alt="Salpicón">
+                <h3>Salpicón</h3>
+                <p>Delicioso salpicón de frutas frescas con helado y queso.</p>
+                <span class="btn-pedir btn-salpicon">🍨 Pedir por WhatsApp</span>
+            </div>
+        </a>
+
+    </div>
+</section>
 
         <br><br>
     </main>
@@ -216,6 +231,52 @@
     
 
     <br><br>
+
+  <!-- SECCIÓN DE RESEÑAS DE GOOGLE -->
+<section class="resenas-section">
+    <h2 class="titulo-resenas">Lo Que Dicen Nuestros Clientes en Google ⭐</h2>
+    
+    <div class="resenas-container">
+        
+        <!-- Reseña 1: Nicolas Mejia -->
+        <div class="resena-card">
+            <div class="resena-header">
+                <div class="avatar-nicolas">N</div>
+                <div class="usuario-info">
+                    <h3>Nicolas Mejia</h3>
+                    <span class="badge-guide">Local Guide</span>
+                </div>
+            </div>
+            <div class="estrellas">⭐⭐⭐⭐⭐</div>
+            <p class="comentario">"Excelente atención, productos y variedad."</p>
+        </div>
+
+        <!-- Reseña 2: Daniela Moncada -->
+        <div class="resena-card">
+            <div class="resena-header">
+                <div class="avatar-daniela">D</div>
+                <div class="usuario-info">
+                    <h3>Daniela Moncada</h3>
+                    <span class="badge-guide">Local Guide</span>
+                </div>
+            </div>
+            <div class="estrellas">⭐⭐⭐⭐⭐</div>
+            <p class="comentario">"Excelentísima atención. De verdad muy amables y tienen de todo y todo es buenísimo. Los batidos los puedes armar a tu gusto..."</p>
+        </div>
+
+    </div>
+
+    <!-- Llamado a la acción para dejar o ver más opiniones -->
+    <div class="google-callout">
+        <a href="https://g.page/r/CTd82qSPm7pBEBM/review" target="_blank" class="btn-google-opinion">
+            👉 ¡Déjanos tu opinión o lee más reseñas en Google Maps!
+        </a>
+    </div>
+</section>
+
+
+
+
 
     <section>
         <footer>
