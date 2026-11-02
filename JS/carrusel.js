@@ -74,3 +74,24 @@ elementos.forEach(function(elemento) {
 
 });
 
+
+  const modal = document.getElementById("menuModal");
+  const openBtn = document.getElementById("openMenuBtn");
+  const closeBtn = document.getElementById("closeMenuBtn");
+
+  // Abrir el modal
+  openBtn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Cerrar el modal al dar clic en la X
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Cerrar el modal al dar clic fuera de las imágenes
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

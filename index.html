@@ -50,6 +50,7 @@
             <a href="./HTML/A-Nosotros.html">NOSOTROS</a>
             <a href="./HTML/A-Ubicasion.html">UBICACIÓN</a>
         </nav>
+        
 
     </header>
 
@@ -60,14 +61,34 @@
     <main>
 
         <h2 class="titulo">🍓 Carta de Batidos Antioqueños</h2>
-
-        <section class="carta-local">
-
-            <img src="IMAGENES/Carta 1.png" class="carta" alt="Carta del local - página 1">
-
-            <img src="IMAGENES/Carta 2.0.png" class="carta" alt="Carta del local - página 2">
-        </section>
+<section class="carta-local">
     
+    <!-- Las dos imágenes agrupadas para que queden lado a lado -->
+    <div class="carta-local-imagenes">
+        <img src="IMAGENES/Carta 1.png" class="carta" alt="Carta del local - página 1">
+        <img src="IMAGENES/Carta 2.0.png" class="carta" alt="Carta del local - página 2">
+    </div>
+
+    <!-- El botón quedará perfectamente centrado abajo -->
+    <button id="openMenuBtn" class="btn-menu-premium">
+        <span class="btn-icon">📖</span>
+        <span class="btn-text">Ver Carta Completa en HD</span>
+    </button>
+
+    <!-- Modal (Ventana emergente) -->
+    <div id="menuModal" class="menu-modal">
+        <div class="menu-modal-content">
+            <span id="closeMenuBtn" class="close-modal">&times;</span>
+            <div class="modal-images">
+                <img src="IMAGENES/Carta 1.png" alt="Carta del local - página 1">
+                <img src="IMAGENES/Carta 2.0.png" alt="Carta del local - página 2">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<br><br>
 
         <h2 class="titulo">Elige Tu Antojo Favorito 🍦</h2>
 
@@ -127,7 +148,7 @@
                 <img src="./IMAGENES/Otros/Cafe Especial.jpg" width="285" height="468" alt="Café Especial">
                 <h3>Chocolate</h3>
                 <p>Delicioso granizado de café puro.</p>
-                <span class="btn-pedir btn-chocolate">🍨 Pedir por WhatsApp</span>
+                <span class="btn-pedir btn-chocolate"> Pedir por WhatsApp</span>
             </div>
         </a>
 
@@ -137,7 +158,7 @@
                 <img src="./IMAGENES/Malteadas/Malteada de fresa.jpeg" width="285" height="468px" alt="Malteada de Fresa">
                 <h3>Fresa</h3>
                 <p>Malteada de Fresa.</p>
-                <span class="btn-pedir btn-fresa">🍨 Pedir por WhatsApp</span>
+                <span class="btn-pedir btn-fresa"> Pedir por WhatsApp</span>
             </div>
         </a>
 
@@ -147,7 +168,7 @@
                 <img src="./IMAGENES/Batidos/Batido verde fuerte.jpeg" width="285" height="470px" alt="Batido verde">
                 <h3>Espinaca</h3>
                 <p>Batido verde.</p>
-                <span class="btn-pedir btn-espinaca">🍨 Pedir por WhatsApp</span>
+                <span class="btn-pedir btn-espinaca"> Pedir por WhatsApp</span>
             </div>
         </a>
 
@@ -157,7 +178,7 @@
                 <img src="./IMAGENES/Helado/Salpicon especial.jpg" width="285" height="468px" alt="Salpicón">
                 <h3>Salpicón</h3>
                 <p>Delicioso salpicón de frutas frescas con helado y queso.</p>
-                <span class="btn-pedir btn-salpicon">🍨 Pedir por WhatsApp</span>
+                <span class="btn-pedir btn-salpicon"> Pedir por WhatsApp</span>
             </div>
         </a>
 
@@ -204,35 +225,45 @@
     <br><br>
 
     <section>
-        <main class="instragram">
-
-
+    <main class="instragram">
         <div class="texto">
-
-            <h1>Apoyanos en Instragram @batidos_md Y TikTok @batidosmd</h1>
+            <h1>Apóyanos en Instagram <a href="https://www.instagram.com/batidos_md/" target="_blank" style="color: var(--carta2-color); text-decoration: none;">@batidos_md</a> y TikTok <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc" target="_blank" style="color: var(--carta2-color); text-decoration: none;">@batidosmd</a></h1>
             <br>
-
         </div>
-
+        
         <div class="contenido-fotos">
+            
+            <!-- Foto 1 -->
+            <a href="https://www.instagram.com/batidos_md/" target="_blank" class="foto-red-link">
+                <img src="./IMAGENES/RedesSociales/Especial/Plato especial.jpg" class="PE1" alt="Plato especial en Instagram">
+                <span class="overlay-red">Ver en Instagram </span>
+            </a>
 
-            <img src="./IMAGENES/RedesSociales/Especial/Plato especial.jpg" class="PE1" alt="Imagenes de Instragram">
-            <img src="./IMAGENES/RedesSociales/Especial/Neriel.jpg" class="N" alt="Imagen neriel">
-            <img src="./IMAGENES/RedesSociales/Especial/Plato especial 2.jpg" class="PE2" alt="Imagenes de Instragram">
-            <img src="IMAGENES/Helado/Fresas con crema 2.jpg" class="N" alt="">
+            <!-- Foto 2 -->
+            <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc" target="_blank" class="foto-red-link">
+                <img src="./IMAGENES/RedesSociales/Especial/Neriel.jpg" class="N" alt="Video en TikTok">
+                <span class="overlay-red">Ver en TikTok </span>
+            </a>
+
+            <!-- Foto 3 -->
+            <a href="https://www.instagram.com/batidos_md/" target="_blank" class="foto-red-link">
+                <img src="./IMAGENES/RedesSociales/Especial/Plato especial 2.jpg" class="PE2" alt="Plato especial en Instagram">
+                <span class="overlay-red">Ver en Instagram </span>
+            </a>
+
+            <!-- Foto 4 -->
+            <a href="https://www.instagram.com/batidos_md/" target="_blank" class="foto-red-link">
+                <img src="IMAGENES/Helado/Fresas con crema 2.jpg" class="N" alt="Fresas con crema en Instagram">
+                <span class="overlay-red">Ver en Instagram </span>
+            </a>
 
         </div>
-
-
     </main>
-
-    </section>
-
-    
+</section>
 
     <br><br>
 
-  <!-- SECCIÓN DE RESEÑAS DE GOOGLE -->
+  <!--! SECCIÓN DE RESEÑAS DE GOOGLE -->
 <section class="resenas-section">
     <h2 class="titulo-resenas">Lo Que Dicen Nuestros Clientes en Google ⭐</h2>
     

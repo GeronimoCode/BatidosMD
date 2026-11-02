@@ -178,26 +178,130 @@ header h1 {
 
 /*! APARTADO CARTA */
 
+/* --- CONTENEDOR GENERAL DE LA SECCIÓN --- */
 .carta-local {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  margin: 40px 0;
-  flex-wrap: wrap; /* clave para móviles */
+    display: flex;
+    flex-direction: column; /* Coloca todo en orden vertical: primero el grupo de fotos, luego el botón */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    gap: 25px;
+    margin: 40px 0;
 }
 
-.carta-local img {
-  width: 620px;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
-  filter: saturate(1.3);
+/* --- CONTENEDOR INTERNO PARA LAS 2 IMÁGENES (UNA AL LADO DE LA OTRA) --- */
+.carta-local-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap; /* Clave para que en celulares bajen una por una si no caben */
+    width: 100%;
 }
 
-.carta-local img:hover {
-  transform: scale(1.05);
+.carta-local-imagenes img {
+    width: 620px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+    filter: saturate(1.3);
 }
+
+.carta-local-imagenes img:hover {
+    transform: scale(1.05);
+}
+
+/* --- BOTÓN PRÉMIUM DE MENÚ (QUEDARÁ ABAJO Y CENTRADO) --- */
+.btn-menu-premium {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--carta2-color) 0%, var(--carta7-color) 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(242, 94, 232, 0.35);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 15px;
+}
+
+.btn-menu-premium:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(242, 94, 232, 0.5);
+    background: linear-gradient(135deg, var(--carta7-color) 0%, var(--carta9-color) 100%);
+}
+
+.btn-menu-premium:active {
+    transform: translateY(1px);
+}
+
+.btn-icon {
+    font-size: 16px;
+}
+
+/* --- ESTILOS DEL MODAL (VENTANA EMERGENTE) --- */
+.menu-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(5px);
+}
+
+.menu-modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 850px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--carta5-color);
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: var(--carta2-color);
+}
+
+.modal-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 
 
@@ -574,6 +678,68 @@ figure {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+
+/* --- ESTILOS INTERACTIVOS PARA FOTOS DE REDES SOCIALES --- */
+.contenido-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.foto-red-link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.foto-red-link img {
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Etiqueta flotante que aparece al pasar el cursor */
+.overlay-red {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.foto-red-link:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.9);
+}
+
+.foto-red-link:hover .overlay-red {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
 
 /*! Tarjetas individuales de reseñas */
 
