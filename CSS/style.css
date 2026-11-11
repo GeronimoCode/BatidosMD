@@ -353,18 +353,18 @@ header .h1 {
 .titulo {
   text-align: center;
   color: var(--carta2-color);
-  font-size: 28px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  font-size: 36px; /* Aumentado de 28px */
+  margin-bottom: 24px;
+  margin-top: 45px;
 }
 
 @media (max-width: 530px) {
   .titulo {
-    font-size: 24px;
+    font-size: 28px; /* Aumentado de 24px */
   }
 }
 
-/* Todos los títulos de sección en peso 900 (Nunito Sans) */
+/* Todos los títulos de sección */
 .titulo,
 .menu h2,
 .waffle .contenido .texto h2,
@@ -424,9 +424,9 @@ main {
 }
 
 .menu h2 {
-  font-size: 24px;
+  font-size: 32px; /* Aumentado de 24px */
   color: var(--carta7-color);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .card-container {
@@ -470,10 +470,12 @@ main {
 
 .card h3 {
   margin-top: 10px;
+  color: #fff;
 }
 
 .card p {
   font-size: 16px;
+  color: #fff;
 }
 
 .btn-pedir {
@@ -500,111 +502,147 @@ main {
 .btn-espinaca  { background-color: #2d8a4e; border: 2px solid #1e6136; }
 .btn-salpicon  { background-color: #e65100; border: 2px solid #bf360c; }
 
+
+
 /* ---------- GALERÍA / CARRUSEL ---------- */
 
 figure {
   margin: 0;
 }
 
-/* Fluida: hasta 700px de ancho y cuadrada, para que se vea completa en pantalla (antes 950px y alturas fijas) */
+/* Caja principal aislada y más amplia */
 #gallery {
-  position: relative; /* necesario para los botones de navegación */
-  width: min(100%, 700px);
-  aspect-ratio: 1 / 1;
+  position: relative;
+  width: min(100%, 950px);
+  aspect-ratio: 16 / 9;
+  max-height: 75vh;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background-color: #1a1a1a;
 }
 
-.gallery-container {
+/* Contenedor del carrusel */
+#gallery .gallery-container {
   display: flex;
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
-.gallery-item {
+/* Ítem individual */
+#gallery .gallery-item {
+  position: relative;
   min-width: 100%;
+  height: 100%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.gallery-item img {
-  display: block;
+/* Imagen duplicada al fondo (desenfocada) */
+#gallery .gallery-item img.bg-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(5px) brightness(0.9);
+  transform: scale(1.1);
+  z-index: 1;
 }
 
-.gallery-navigation {
+/* Imagen principal nítida */
+#gallery .gallery-item img.main-img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Navegación */
+#gallery .gallery-navigation {
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 40px);
-  margin: 0 20px;
+  width: calc(100% - 30px);
+  margin: 0 15px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
 }
 
-.nav-button {
+#gallery .nav-button {
+  pointer-events: auto;
   min-width: 44px;
   min-height: 44px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: var(--carta2-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.nav-button > span {
-  font-size: 30px;
+#gallery .nav-button > span {
+  font-size: 24px;
 }
 
-.nav-button:hover {
-  background-color: var(--carta1-color);
+#gallery .nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: scale(1.05);
 }
 
+/* Pantallas Medianas (Tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
   #gallery {
-    width: min(90%, 700px);
-  }
-
-  .nav-button {
-    padding: 8px 15px;
-  }
-
-  .nav-button > span {
-    font-size: 25px;
+    width: min(92%, 800px);
+    max-height: 70vh;
   }
 }
 
+/* Pantallas Pequeñas (Móviles) */
 @media (max-width: 600px) {
   #gallery {
     width: 100%;
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 4 / 3;
+    max-height: 65vh;
   }
 
-  .nav-button {
-    padding: 6px 10px;
+  #gallery .nav-button {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 4px;
   }
 
-  .nav-button > span {
+  #gallery .nav-button > span {
     font-size: 20px;
   }
 
-  .gallery-navigation {
-    width: calc(100% - 20px);
-    margin: 0 10px;
+  #gallery .gallery-navigation {
+    width: calc(100% - 16px);
+    margin: 0 8px;
   }
 }
 
-/* PC: más alto que ancho (700 x hasta 820 px), sin pasarse de la pantalla */
+/* Pantallas Grandes (Escritorio) */
 @media (min-width: 1025px) {
   #gallery {
-    width: min(100%, 700px);
-    aspect-ratio: auto;
-    height: min(820px, 88vh);
+    width: min(100%, 950px);
+    aspect-ratio: 16 / 9;
+    max-height: 75vh;
   }
 }
 
@@ -628,9 +666,8 @@ figure {
   border-radius: 8px;
 }
 
-/* Antes "h1"; ahora es h2 */
 .waffle .contenido .texto h2 {
-  font-size: 38px;
+  font-size: 44px; /* Aumentado de 38px */
   color: rgb(255, 255, 255);
   margin: 0 0 18% 0;
 }
@@ -650,7 +687,7 @@ figure {
   width: 350px;
   height: 600px;
   max-width: 100%;
-  object-fit: cover; /* evita que la foto se deforme */
+  object-fit: cover;
 }
 
 @media (max-width: 600px) {
@@ -666,7 +703,7 @@ figure {
   }
 
   .waffle .contenido .texto h2 {
-    font-size: 28px;
+    font-size: 32px; /* Aumentado de 28px */
     margin: 0;
   }
 
@@ -691,10 +728,9 @@ figure {
   border-radius: 8px;
 }
 
-/* Antes "h1" (2em por defecto); se mantiene ese tamaño en el h2 */
 .instragram .texto h2 {
-  font-size: clamp(1.4rem, 4vw, 2rem);
-  padding: 10px 10px 0;
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem); /* Aumentado de clamp(1.4rem, 4vw, 2rem) */
+  padding: 12px 10px 0;
 }
 
 .contenido-fotos,
@@ -787,7 +823,7 @@ figure {
 
 .visitanos h2 {
   margin-bottom: 12px;
-  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.8rem, 4vw, 2.6rem); /* Aumentado de clamp(1.5rem, 3.5vw, 2.2rem) */
   color: var(--carta7-color);
 }
 
@@ -835,7 +871,6 @@ figure {
 }
 
 /* ---------- RESEÑAS ---------- */
-/* Se eliminaron las reglas duplicadas del bloque anterior (las de abajo eran las que ganaban) */
 
 .resenas-section {
   padding: 40px 20px;
@@ -846,7 +881,7 @@ figure {
 
 .titulo-resenas {
   color: var(--carta6-color);
-  font-size: 26px;
+  font-size: 34px; /* Aumentado de 26px */
   font-weight: 800;
   margin-bottom: 25px;
 }
@@ -935,7 +970,7 @@ figure {
 .btn-google-opinion {
   display: inline-block;
   padding: 12px 24px;
-  background-color: var(--carta9-color); /* oscuro para que el texto blanco se lea */
+  background-color: var(--carta9-color);
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -994,9 +1029,8 @@ footer .redes-sociales {
   }
 }
 
-/* ---------- ANIMACIÓN AL HACER SCROLL (si tu JS la usa) ---------- */
+/* ---------- ANIMACIÓN AL HACER SCROLL ---------- */
 
-/* Cada sección entra de costado (izquierda/derecha, alternando) con un leve zoom */
 .animacion-scroll {
   opacity: 0;
   transform: translateX(-48px) scale(0.97);
