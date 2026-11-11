@@ -12,32 +12,31 @@
   /* Letra de títulos: Playfair Display en peso 800 (si no carga, usa Times New Roman) */
  --font-titulos: "Nunito", "Arial Rounded MT Bold", sans-serif;
 }
-
 /* ---------- BASE ---------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background-color: #fee5f0;
-  overflow-x: clip;
-  font-family: "Nunito Sans", sans-serif; /* la fuente se carga en el <head> del HTML */
+  font-family: "Nunito Sans", sans-serif;
 }
 
 img {
   max-width: 100%;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #3b2314;
-  outline-offset: 3px;
+  height: auto;
 }
 
 /* ---------- BOTÓN FLOTANTE DE WHATSAPP ---------- */
