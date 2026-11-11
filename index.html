@@ -103,13 +103,13 @@
 
     <!-- HERO con video de fondo. El texto (h1, párrafo y botones) es HTML normal: Google lo lee igual -->
     <section class="hero" aria-labelledby="hero-titulo">
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata"
-               poster="./IMAGENES/Helado/Brownie helado.jpeg" aria-hidden="true" disablepictureinpicture>
-            <source src="./VIDEO/hero.webm" type="video/mp4">
-        </video>
-
+       <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="./IMAGENES/Helado/Brownie helado.jpeg" aria-hidden="true" disablepictureinpicture>
+    <!-- El navegador leerá primero el formato WebM por ser más liviano -->
+    <source src="./VIDEO/hero.webm" type="video/webm">
+    <source src="./VIDEO/hero.mp4" type="video/mp4">
+</video>
         <div class="hero__body">
-            <h1 class="hero__title" id="hero-titulo">Batidos, helados y waffles en Santa Fé de Antioquia</h1>
+            <h1 class="hero__title" id="hero-titulo">Batidos y helados en Santa Fé de Antioquia</h1>
             <p class="hero__text">Arma tu batido a tu gusto o elige una malteada, una copa de helado o un waffle con fruta fresca.</p>
             <p class="hero__hours"><i class="fa fa-clock-o" aria-hidden="true"></i> Abierto todos los días de 2 p. m. a 10 p. m.</p>
             <div class="hero__actions">
@@ -122,7 +122,7 @@
 
     </section>
 
-    <br><br><br>
+    <br><br>
 
     <main>
 
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <br><br>
+        <br>
    
 
         <h2 class="titulo">¿Cuál se te antoja hoy? 🍦</h2>

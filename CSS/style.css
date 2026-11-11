@@ -133,7 +133,7 @@ header {
 
 /* Antes era "header h1"; ahora el título del encabezado es <p class="h1"> */
 header .h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
 }
 
@@ -360,7 +360,7 @@ header .h1 {
 
 @media (max-width: 530px) {
   .titulo {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
