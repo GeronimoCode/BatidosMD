@@ -1,109 +1,458 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es-CO">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Batidos antioqueños MD | Ven y disfruta</title>
+    <!-- SEO principal -->
+    <title>Ubicación y horarios | Batidos Antioqueños MD en Santa Fe</title>
+
+    <meta name="description" content="Visita Batidos Antioqueños MD en Santa Fe de Antioquia. Encuentra nuestra dirección, horarios y mapa para disfrutar batidos, jugos, waffles, sodas, micheladas y copas de helado.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Batidos Antioqueños MD">
+    <meta name="theme-color" content="#f25ee8">
+
+    <link rel="canonical" href="https://batidos-md.vercel.app/HTML/A-Ubicasion.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="../IMAGENES/Logos/0Logo principal.jpg">
+
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/ubicasion.css">
-    <link rel="icon" href="../IMAGENES/Logos/0Logo principal.jpg">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YW3SMYES3V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  gtag('config', 'G-YW3SMYES3V');
-</script>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Batidos Antioqueños MD">
+    <meta property="og:title" content="Dónde estamos | Batidos Antioqueños MD">
+    <meta property="og:description" content="Encuentra Batidos Antioqueños MD en Santa Fe de Antioquia. Consulta nuestra dirección, horarios y ubicación para visitarnos.">
+    <meta property="og:image" content="https://batidos-md.vercel.app/IMAGENES/Carta%201.png">
+    <meta property="og:image:alt" content="Productos de Batidos Antioqueños MD">
+    <meta property="og:url" content="https://batidos-md.vercel.app/HTML/A-Ubicasion.html">
 
-<!-- Etiquetas para WhatsApp, Facebook e Instagram -->
-<meta property="og:title" content="Batidos Antioqueños MD | Helados, Malteadas y Waffles" />
-<meta property="og:description" content="Ven y disfruta de los mejores batidos, copas de helado y waffles en Santa Fé de Antioquia." />
-<meta property="og:image" content="https://batidos-md.vercel.app/IMAGENES/Carta%201.png" />
-<meta property="og:url" content="https://batidos-md.vercel.app/" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ubicación | Batidos Antioqueños MD">
+    <meta name="twitter:description" content="Visítanos en Santa Fe de Antioquia. Consulta nuestra dirección y horarios de atención.">
+    <meta name="twitter:image" content="https://batidos-md.vercel.app/IMAGENES/Carta%201.png">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW3SMYES3V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-YW3SMYES3V');
+    </script>
+
+    <!-- Datos estructurados del establecimiento -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://batidos-md.vercel.app/#business",
+        "name": "Batidos Antioqueños MD",
+        "url": "https://batidos-md.vercel.app/",
+        "image": "https://batidos-md.vercel.app/IMAGENES/Carta%201.png",
+        "description": "Establecimiento en Santa Fe de Antioquia donde puedes disfrutar batidos, jugos, waffles, sodas, micheladas y copas de helado.",
+        "telephone": "+573194845289",
+        "email": "batidosantioquenosmd@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl. 11 #18173",
+            "addressLocality": "Santa Fe de Antioquia",
+            "addressRegion": "Antioquia",
+            "addressCountry": "CO"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Santa Fe de Antioquia"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "14:00",
+                "closes": "22:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/batidos_md/",
+            "https://www.tiktok.com/@batidosmd",
+            "https://www.facebook.com/profile.php?id=61558666632452"
+        ]
+    }
+    </script>
 
 </head>
 
-
 <body>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=3194845289&text=Hola,%20me%20gustaria%20Obtener%20m%C3%A1s%20informaci%C3%B3n" class="float pulse" target="_blank">
-<i class="fa fa-whatsapp my-float "></i>
-</a>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573194845289?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20su%20ubicación"
+       class="float pulse"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
 
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Encabezado -->
     <header>
 
-        <a href="../index.html">
-        <img src="../IMAGENES/Logos/0Logo (sin fondo).png" width="150" class="logo"> </a>
+        <a href="../index.html" aria-label="Ir al inicio">
+            <img
+                src="../IMAGENES/Logos/0Logo (sin fondo).png"
+                width="150"
+                class="logo"
+                alt="Logo de Batidos Antioqueños MD">
+        </a>
 
         <h1>BATIDOS ANTIOQUEÑOS MD</h1>
 
-        <nav class="CENTRAR">
+        <nav class="CENTRAR" aria-label="Navegación principal">
 
             <a href="../index.html">INICIO</a>
+
             <a href="A-Nosotros.html">NOSOTROS</a>
-            <a href="A-Ubicasion.html">UBICACIÓN</a>
+
+            <a href="A-Ubicasion.html" aria-current="page">UBICACIÓN</a>
+
         </nav>
 
     </header>
 
-
     <br><br>
 
+    <!-- Contenido principal -->
     <main>
 
-    <h2 style="color: var(--carta2-color);">Encuéntranos en:</h2>
+        <section class="section-ubicacion">
 
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6783142983018!2d-75.83644152420653!3d6.562227922710478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e45b7c467c69bc9%3A0x41ba9b8fa4da7c37!2sBatidos%20Antioque%C3%B1os%20MD!5e0!3m2!1ses-419!2sco!4v1759948181923!5m2!1ses-419!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <h2 style="color: var(--carta2-color);">
+                ¿Dónde estamos ubicados?
+            </h2>
 
+            <br>
+
+            <p>
+                ¡Queremos recibirte! En <strong>Batidos Antioqueños MD</strong>
+                contamos con un espacio para que disfrutes de diferentes
+                sabores y compartas momentos agradables.
+
+                Estamos ubicados en <strong>Santa Fe de Antioquia,
+                Antioquia, Colombia</strong>, y esperamos tu visita para
+                que conozcas nuestra variedad de productos.
+            </p>
+
+            <br>
+
+            <h2 style="color: var(--carta2-color);">
+                Visítanos en Santa Fe de Antioquia
+            </h2>
+
+            <br>
+
+            <p>
+                Puedes encontrarnos en la siguiente dirección:
+            </p>
+
+            <p>
+                <strong>Dirección:</strong> Cl. 11 #18173,
+                Santa Fe de Antioquia, Antioquia, Colombia.
+            </p>
+
+            <br>
+
+            <p>
+                Consulta el mapa para conocer nuestra ubicación y
+                organizar tu recorrido hasta el establecimiento.
+            </p>
+
+            <br>
+
+            <!-- Mapa de Google Maps -->
+            <div class="map-container">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6783142983018!2d-75.83644152420653!3d6.562227922710478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e45b7c467c69bc9%3A0x41ba9b8fa4da7c37!2sBatidos%20Antioque%C3%B1os%20MD!5e0!3m2!1ses-419!2sco!4v1759948181923!5m2!1ses-419!2sco"
+                    width="800"
+                    height="600"
+                    style="border:0;"
+                    title="Ubicación de Batidos Antioqueños MD en Santa Fe de Antioquia"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+            <br><br>
+
+            <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Batidos+Antioque%C3%B1os+MD%2C+Santa+Fe+de+Antioquia"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Cómo llegar con Google Maps
+            </a>
+
+            <br><br>
+
+            <h2 style="color: var(--carta2-color);">
+                Horarios de atención
+            </h2>
+
+            <br>
+
+            <p>
+                Queremos que puedas visitarnos cuando quieras disfrutar
+                de nuestros productos. Nuestro horario de atención es:
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Todos los días:</strong>
+                de 2:00 p. m. a 10:00 p. m.
+            </p>
+
+            <br><br>
+
+            <h2 style="color: var(--carta2-color);">
+                ¿Qué puedes disfrutar en Batidos Antioqueños MD?
+            </h2>
+
+            <br>
+
+            <p>
+                En nuestro establecimiento encontrarás diferentes
+                opciones para acompañar tus momentos especiales.
+                Nuestra variedad incluye:
+            </p>
+
+            <br>
+
+            
+<ul class="product-grid">
+
+    <li class="product-card">
+        <strong>Batidos</strong>
+        Bebidas preparadas con diferentes sabores y combinaciones de frutas.
+    </li>
+
+    <li class="product-card">
+        <strong>Jugos</strong>
+        Opciones refrescantes para disfrutar en cualquier momento del día.
+    </li>
+
+    <li class="product-card">
+        <strong>Waffles</strong>
+        Preparaciones dulces con diferentes acompañamientos.
+    </li>
+
+    <li class="product-card">
+        <strong>Sodas</strong>
+        Bebidas refrescantes para disfrutar y compartir.
+    </li>
+
+    <li class="product-card">
+        <strong>Micheladas</strong>
+        Alternativas para quienes buscan sabores diferentes.
+    </li>
+
+    <li class="product-card">
+        <strong>Copas de helado</strong>
+        Combinaciones dulces para disfrutar.
+    </li>
+
+</ul>
+
+            <br>
+
+            <p>
+                Ya sea que vivas en Santa Fe de Antioquia o estés
+                visitando este municipio, te invitamos a conocer
+                nuestra propuesta y disfrutar de nuestros productos.
+            </p>
+
+            <br><br>
+
+            <h2 style="color: var(--carta2-color);">
+                Contáctanos
+            </h2>
+
+            <br>
+
+            <p>
+                ¿Tienes preguntas sobre nuestros productos, horarios
+                o ubicación? Puedes comunicarte con nosotros
+                directamente por WhatsApp.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Teléfono:</strong> +57 319 484 5289
+            </p>
+
+            <p>
+                <strong>Correo electrónico:</strong>
+                batidosantioquenosmd@gmail.com
+            </p>
+
+            <br>
+
+            <a
+                href="https://wa.me/573194845289"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Escríbenos por WhatsApp
+            </a>
+
+            <br><br>
+
+            <p>
+                También puedes conocer nuestros productos y novedades
+                a través de nuestras redes sociales.
+            </p>
+
+        </section>
 
     </main>
 
     <br><br>
 
+    <!-- Pie de página -->
     <footer>
 
         <p>&copy; 2026 BATIDOS ANTIOQUEÑOS MD. Todos los derechos reservados.</p>
+
         <br>
-        <p>Teléfono: +57 319 484 5289 | Contacto: batidosantioquenosmd@gmail.com </p>
+
+        <p>
+            Teléfono: +57 319 484 5289 |
+            Contacto: batidosantioquenosmd@gmail.com
+        </p>
 
         <br>
 
         <div class="redes-sociales">
 
             <div class="i">
-                <a href="https://wa.me/573194845289" target="_blank"> <img src="../IMAGENES/RedesSociales/icons8-whatsapp-50.png" width="35px" heigth="10px" alt=""> WhatsApp</a>
+                <a href="https://wa.me/573194845289"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img
+                        src="../IMAGENES/RedesSociales/icons8-whatsapp-50.png"
+                        width="35"
+                        alt="">
+
+                    WhatsApp
+                </a>
             </div>
 
             <div class="i">
-                <a class="facebook" href="https://www.facebook.com/profile.php?id=61558666632452"target="_blank"><img src="../IMAGENES/RedesSociales/facebook.png" width="35px" heigth="10px" alt=""> Facebook</a>
+                <a class="facebook"
+                   href="https://www.facebook.com/profile.php?id=61558666632452"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img
+                        src="../IMAGENES/RedesSociales/facebook.png"
+                        width="35"
+                        alt="">
+
+                    Facebook
+                </a>
             </div>
 
-
             <div class="i">
-                <a href="https://www.instagram.com/batidos_md/" target="_blank">  <img src="../IMAGENES/RedesSociales/instagram.png" width="35px" heigth="10px"> Instagram</a>
+                <a href="https://www.instagram.com/batidos_md/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img
+                        src="../IMAGENES/RedesSociales/instagram.png"
+                        width="35"
+                        alt="">
+
+                    Instagram
+                </a>
             </div>
 
-
             <div class="i">
+                <a href="https://www.tiktok.com/@batidosmd"
+                   target="_blank"
+                   rel="noopener noreferrer">
 
-                <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc" target="_blank">
-                    <img src="../IMAGENES/RedesSociales/tik-tok.png" width="35px" heigth="10px" alt="">  TikTok</a>
-                </div>
+                    <img
+                        src="../IMAGENES/RedesSociales/tik-tok.png"
+                        width="35"
+                        alt="">
+
+                    TikTok
+                </a>
+            </div>
 
         </div>
 
     </footer>
+
     <!-- Vercel Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>
+
+
+
+<script>
+    const elementos = document.querySelectorAll(
+        ".section-ubicacion h2, " +
+        ".section-ubicacion p, " +
+        ".map-container, " +
+        ".product-card, " +
+        ".section-ubicacion > a"
+    );
+
+    elementos.forEach(elemento => {
+        elemento.classList.add("scroll-reveal");
+    });
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    elementos.forEach(elemento => {
+        observador.observe(elemento);
+    });
+</script>
 
 
 </body>

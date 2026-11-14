@@ -1,64 +1,119 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO básico -->
-    <title>Batidos y waffles en Santa Fé de Antioquia | Batidos MD</title>
-    <meta name="description" content="Batidos, helados, malteadas y waffles en Santa Fé de Antioquia. Abierto todos los días de 2 p. m. a 10 p. m. Pide por WhatsApp.">
-    <link rel="canonical" href="https://batidos-md.vercel.app/">
+    <!-- SEO PRINCIPAL -->
+    <title>Batidos y Jugos en Santa Fe de Antioquia | Batidos MD</title>
+
+    <meta name="description" content="Disfruta batidos, jugos naturales, waffles, sodas, micheladas y copas de helado en Batidos Antioqueños MD, Santa Fe de Antioquia. ¡Visítanos o pide por WhatsApp!">
+
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f25ee8">
+    <meta name="author" content="Batidos Antioqueños MD">
 
-    <!-- Estilos -->
+    <link rel="canonical" href="https://batidos-md.vercel.app/">
+
+    <!-- FAVICON JPG -->
+    <link rel="icon" type="image/jpeg"
+          href="./IMAGENES/Logos/0Logo principal.jpg">
+
+    <!-- ESTILOS -->
     <link rel="stylesheet" href="./CSS/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&family=Playfair+Display:wght@700;800&display=swap">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="icon" href="./IMAGENES/Logos/0Logo principal.jpg">
 
-    <!-- La foto del hero es lo primero que se ve: se carga con prioridad -->
-    <link rel="preload" as="image" href="./IMAGENES/Helado/Brownie helado.jpeg" fetchpriority="high">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&family=Playfair+Display:wght@700;800&display=swap">
 
-    <!-- WhatsApp, Facebook, Instagram -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- IMAGEN PRINCIPAL -->
+    <link rel="preload" as="image"
+          href="./IMAGENES/Helado/Brownie helado.jpeg"
+          fetchpriority="high">
+
+    <!-- OPEN GRAPH: FACEBOOK Y WHATSAPP -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CO">
     <meta property="og:site_name" content="Batidos Antioqueños MD">
-    <meta property="og:title" content="Batidos Antioqueños MD | Helados, Malteadas y Waffles">
-    <meta property="og:description" content="Ven y disfruta de los mejores batidos, copas de helado y waffles en Santa Fé de Antioquia.">
-    <meta property="og:image" content="https://batidos-md.vercel.app/IMAGENES/Helado/Waffle.jpg">
-    <meta property="og:image:alt" content="Waffle con fresas, banano, helado y crema">
-    <meta property="og:url" content="https://batidos-md.vercel.app/">
+
+    <meta property="og:title"
+          content="Batidos Antioqueños MD | Batidos, Jugos y Waffles">
+
+    <meta property="og:description"
+          content="Disfruta batidos, jugos, waffles, sodas, micheladas y copas de helado en Santa Fe de Antioquia.">
+
+    <meta property="og:image"
+          content="https://batidos-md.vercel.app/IMAGENES/Helado/Waffle.jpg">
+
+    <meta property="og:image:alt"
+          content="Waffle con fresas, banano, crema y chocolate de Batidos Antioqueños MD">
+
+    <meta property="og:image:type" content="image/jpeg">
+
+    <meta property="og:url"
+          content="https://batidos-md.vercel.app/">
+
+    <!-- TWITTER / X -->
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Datos estructurados para Google (negocio local).
-         Solo falta la dirección exacta: agrégala dentro de "address" como "streetAddress". -->
+    <meta name="twitter:title"
+          content="Batidos Antioqueños MD | Santa Fe de Antioquia">
+
+    <meta name="twitter:description"
+          content="Batidos, jugos, waffles, sodas, micheladas y copas de helado en Santa Fe de Antioquia.">
+
+    <meta name="twitter:image"
+          content="https://batidos-md.vercel.app/IMAGENES/Helado/Waffle.jpg">
+
+    <meta name="twitter:image:alt"
+          content="Waffle con frutas de Batidos Antioqueños MD">
+
+    <!-- DATOS ESTRUCTURADOS: NEGOCIO LOCAL -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "IceCreamShop",
+      "@type": "LocalBusiness",
+      "@id": "https://batidos-md.vercel.app/#business",
       "name": "Batidos Antioqueños MD",
       "url": "https://batidos-md.vercel.app/",
       "image": "https://batidos-md.vercel.app/IMAGENES/Helado/Waffle.jpg",
-      "description": "Batidos, copas de helado, malteadas y waffles en Santa Fé de Antioquia.",
+      "description": "Batidos Antioqueños MD ofrece batidos, jugos naturales, waffles, sodas, micheladas y copas de helado en Santa Fe de Antioquia.",
       "telephone": "+573194845289",
       "email": "batidosantioquenosmd@gmail.com",
-      "servesCuisine": ["Batidos", "Helados", "Malteadas", "Waffles"],
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "14:00",
-        "closes": "22:00"
-      },
       "address": {
-        "@type": "Cl. 11 #18173, Santa Fé de Antioquia, Antioquia",
-        "addressLocality": "Santa Fé de Antioquia",
+        "@type": "PostalAddress",
+        "streetAddress": "Cl. 11 #18173",
+        "addressLocality": "Santa Fe de Antioquia",
         "addressRegion": "Antioquia",
         "addressCountry": "CO"
       },
+      "areaServed": {
+        "@type": "City",
+        "name": "Santa Fe de Antioquia"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "14:00",
+          "closes": "22:00"
+        }
+      ],
       "sameAs": [
         "https://www.instagram.com/batidos_md/",
         "https://www.tiktok.com/@batidosmd",
@@ -67,30 +122,44 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW3SMYES3V"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-YW3SMYES3V');
     </script>
+
 </head>
 
 <body>
 
-    <!-- Botón flotante de WhatsApp (número con código de país 57) -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n"
-       class="float pulse" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
-        <i class="fa fa-whatsapp my-float"></i>
+       class="float pulse"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Escríbenos por WhatsApp">
+
+        <i class="fa fa-whatsapp my-float" aria-hidden="true"></i>
     </a>
 
+    <!-- ENCABEZADO -->
     <header class="nav">
+
         <a href="/">
-            <img src="./IMAGENES/Logos/0Logo (sin fondo).png" width="150" class="logo" alt="Batidos Antioqueños MD">
+            <img src="./IMAGENES/Logos/0Logo (sin fondo).png"
+                 width="150"
+                 class="logo"
+                 alt="Logo de Batidos Antioqueños MD">
         </a>
 
-        <!-- El único <h1> de la página ahora está en el hero -->
         <p class="h1">BATIDOS ANTIOQUEÑOS MD</p>
 
         <nav class="CENTRAR" aria-label="Navegación principal">
@@ -98,26 +167,57 @@
             <a href="./HTML/A-Nosotros.html">NOSOTROS</a>
             <a href="./HTML/A-Ubicasion.html">UBICACIÓN</a>
         </nav>
+
     </header>
 
-
-    <!-- HERO con video de fondo. El texto (h1, párrafo y botones) es HTML normal: Google lo lee igual -->
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-titulo">
-       <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="./IMAGENES/Helado/Brownie helado.jpeg" aria-hidden="true" disablepictureinpicture>
-    <!-- El navegador leerá primero el formato WebM por ser más liviano -->
-    <source src="./VIDEO/hero.webm" type="video/webm">
-    <source src="./VIDEO/hero.mp4" type="video/mp4">
-</video>
+
+        <video class="hero__video"
+               autoplay
+               muted
+               loop
+               playsinline
+               preload="metadata"
+               poster="./IMAGENES/Helado/Brownie helado.jpeg"
+               aria-hidden="true"
+               disablepictureinpicture>
+
+            <source src="./VIDEO/hero.mp4" type="video/mp4">
+
+        </video>
+
         <div class="hero__body">
-            <h1 class="hero__title" id="hero-titulo">Batidos y helados en Santa Fé de Antioquia</h1>
-            <p class="hero__text">Arma tu batido a tu gusto o elige una malteada, una copa de helado o un waffle con fruta fresca.</p>
-            <p class="hero__hours"><i class="fa fa-clock-o" aria-hidden="true"></i> Abierto todos los días de 2 p. m. a 10 p. m.</p>
+
+            <h1 class="hero__title" id="hero-titulo">
+                Batidos, jugos y waffles en Santa Fe de Antioquia
+            </h1>
+
+            <p class="hero__text">
+                Disfruta nuestros batidos personalizados, jugos naturales,
+                waffles, sodas, micheladas y copas de helado.
+            </p>
+
+            <p class="hero__hours">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                Abierto todos los días de 2 p. m. a 10 p. m.
+            </p>
+
             <div class="hero__actions">
+
                 <a class="hero__btn hero__btn--primary"
                    href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido"
-                   target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-                <a class="hero__btn hero__btn--secondary" href="#carta">Ver la carta</a>
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Pedir por WhatsApp
+                </a>
+
+                <a class="hero__btn hero__btn--secondary" href="#carta">
+                    Ver la carta
+                </a>
+
             </div>
+
         </div>
 
     </section>
@@ -126,243 +226,615 @@
 
     <main>
 
-        <h2 class="titulo" id="carta">🍓 Mira la carta: batidos, helados y mucho mas...</h2>
+        <!-- CARTA -->
+        <h2 class="titulo" id="carta">
+            🍓 Nuestra carta: batidos, jugos, waffles y mucho más
+        </h2>
+
         <section class="carta-local">
+
             <div class="carta-local-imagenes">
-                <img src="IMAGENES/Carta 1.png" class="carta" loading="lazy" decoding="async"
-                     alt="Carta de Batidos Antioqueños MD, página 1: batidos, malteadas y bebidas">
-                <img src="IMAGENES/Carta 2.0.png" class="carta" loading="lazy" decoding="async"
-                     alt="Carta de Batidos Antioqueños MD, página 2: helados, waffles y postres">
+
+                <img src="IMAGENES/Carta 1.png"
+                     class="carta"
+                     loading="lazy"
+                     decoding="async"
+                     alt="Carta de Batidos Antioqueños MD: batidos, jugos y bebidas">
+
+                <img src="IMAGENES/Carta 2.0.png"
+                     class="carta"
+                     loading="lazy"
+                     decoding="async"
+                     alt="Carta de Batidos Antioqueños MD: waffles, sodas, micheladas y copas de helado">
+
             </div>
+
         </section>
 
         <br>
-   
-<h2 class="titulo">¿Cuál se te antoja hoy? 🍦</h2>
 
-<br>
+        <!-- GALERÍA -->
+        <h2 class="titulo">¿Cuál se te antoja hoy? 🍓</h2>
 
-<section id="gallery">
-    <div class="gallery-container">
+        <br>
 
-        <figure class="gallery-item">
-            <img src="./IMAGENES/Otros/Soda cereza.jpg" alt="" class="bg-blur" aria-hidden="true">
-            <img src="./IMAGENES/Otros/Soda cereza.jpg" alt="Soda de cereza" class="main-img" loading="lazy" style="filter: saturate(1.1);">
-        </figure>
+        <section id="gallery" aria-label="Galería de productos">
 
-        <figure class="gallery-item">
-            <img src="./IMAGENES/Malteadas/Malteadas.jpg" alt="" class="bg-blur" aria-hidden="true">
-            <img src="./IMAGENES/Malteadas/Malteadas.jpg" alt="Malteadas de la casa" class="main-img" loading="lazy" style="filter: saturate(1.1);">
-        </figure>
+            <div class="gallery-container">
 
-        <figure class="gallery-item">
-            <img src="./IMAGENES/Helado/FRutas con crema.jpeg" alt="" class="bg-blur" aria-hidden="true">
-            <img src="./IMAGENES/Helado/FRutas con crema.jpeg" alt="Frutas frescas con crema y helado" class="main-img" loading="lazy" style="filter: saturate(1.1);">
-        </figure>
+                <figure class="gallery-item">
 
-        <figure class="gallery-item">
-            <img src="./IMAGENES/Otros/cafe especial.jpg" alt="" class="bg-blur" aria-hidden="true">
-            <img src="./IMAGENES/Otros/cafe especial.jpg" alt="Granizado de café especial" class="main-img" loading="lazy" style="filter: saturate(1.1);">
-        </figure>
+                    <img src="./IMAGENES/Otros/Soda cereza.jpg"
+                         alt=""
+                         class="bg-blur"
+                         aria-hidden="true">
 
-        <figure class="gallery-item">
-            <img src="./IMAGENES/Helado/Brownie helado.jpeg" alt="" class="bg-blur" aria-hidden="true">
-            <img src="./IMAGENES/Helado/Brownie helado.jpeg" alt="Brownie con helado" class="main-img" loading="lazy" style="filter: saturate(1.1);">
-        </figure>
+                    <img src="./IMAGENES/Otros/Soda cereza.jpg"
+                         alt="Soda de cereza preparada en Batidos Antioqueños MD"
+                         class="main-img"
+                         loading="lazy"
+                         decoding="async"
+                         style="filter: saturate(1.1);">
 
-    </div>
+                </figure>
 
-    <nav class="gallery-navigation" aria-label="Galería">
-        <button class="nav-button prev-button" aria-label="Foto anterior"><span>&lt;</span></button>
-        <button class="nav-button next-button" aria-label="Foto siguiente"><span>&gt;</span></button>
-    </nav>
-</section>
+                <figure class="gallery-item">
+
+                    <img src="./IMAGENES/Malteadas/Malteadas.jpg"
+                         alt=""
+                         class="bg-blur"
+                         aria-hidden="true">
+
+                    <img src="./IMAGENES/Malteadas/Malteadas.jpg"
+                         alt="Malteadas de diferentes sabores"
+                         class="main-img"
+                         loading="lazy"
+                         decoding="async"
+                         style="filter: saturate(1.1);">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img src="./IMAGENES/Helado/FRutas con crema.jpeg"
+                         alt=""
+                         class="bg-blur"
+                         aria-hidden="true">
+
+                    <img src="./IMAGENES/Helado/FRutas con crema.jpeg"
+                         alt="Frutas frescas con crema"
+                         class="main-img"
+                         loading="lazy"
+                         decoding="async"
+                         style="filter: saturate(1.1);">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img src="./IMAGENES/Otros/cafe especial.jpg"
+                         alt=""
+                         class="bg-blur"
+                         aria-hidden="true">
+
+                    <img src="./IMAGENES/Otros/cafe especial.jpg"
+                         alt="Granizado de café especial"
+                         class="main-img"
+                         loading="lazy"
+                         decoding="async"
+                         style="filter: saturate(1.1);">
+
+                </figure>
+
+                <figure class="gallery-item">
+
+                    <img src="./IMAGENES/Helado/Brownie helado.jpeg"
+                         alt=""
+                         class="bg-blur"
+                         aria-hidden="true">
+
+                    <img src="./IMAGENES/Helado/Brownie helado.jpeg"
+                         alt="Brownie de chocolate con acompañamiento cremoso"
+                         class="main-img"
+                         loading="lazy"
+                         decoding="async"
+                         style="filter: saturate(1.1);">
+
+                </figure>
+
+            </div>
+
+            <nav class="gallery-navigation" aria-label="Controles de galería">
+
+                <button class="nav-button prev-button" aria-label="Foto anterior">
+                    <span>&lt;</span>
+                </button>
+
+                <button class="nav-button next-button" aria-label="Foto siguiente">
+                    <span>&gt;</span>
+                </button>
+
+            </nav>
+
+        </section>
 
         <br><br><br><br>
 
+        <!-- PRODUCTOS FAVORITOS -->
         <section class="menu">
-            <h2>Antójate de estos favoritos</h2>
+
+            <h2>Antójate de nuestros favoritos</h2>
+
             <br>
+
             <div class="card-container">
 
-                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Granizado%20de%20Caf%C3%A9%20Especial" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                    <div class="card" style="background-color: var(--carta5-color); cursor: pointer;">
-                        <img src="./IMAGENES/Otros/Cafe Especial.jpg" width="285" height="468" loading="lazy" alt="Granizado de café especial con chocolate">
+                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Granizado%20de%20Caf%C3%A9%20Especial"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="card"
+                         style="background-color: var(--carta5-color); cursor: pointer;">
+
+                        <img src="./IMAGENES/Otros/Cafe Especial.jpg"
+                             width="285"
+                             height="468"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Granizado de café especial con chocolate">
+
                         <h3>Granizado de café especial</h3>
-                        <p>Delicioso granizado de café puro.</p>
-                        <span class="btn-pedir btn-chocolate"> Pedir por WhatsApp</span>
+
+                        <p>Delicioso granizado preparado con café puro.</p>
+
+                        <span class="btn-pedir btn-chocolate">
+                            Pedir por WhatsApp
+                        </span>
+
                     </div>
+
                 </a>
 
-                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20Malteada%20de%20Fresa" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                    <div class="card" style="background-color: var(--carta2-color); cursor: pointer;">
-                        <img src="./IMAGENES/Malteadas/Malteada de fresa.jpeg" width="285" height="468" loading="lazy" alt="Malteada de fresa">
+                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20Malteada%20de%20Fresa"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="card"
+                         style="background-color: var(--carta2-color); cursor: pointer;">
+
+                        <img src="./IMAGENES/Malteadas/Malteada de fresa.jpeg"
+                             width="285"
+                             height="468"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Malteada cremosa de fresa">
+
                         <h3>Malteada de fresa</h3>
-                        <p>Malteada de fresa cremosa.</p>
-                        <span class="btn-pedir btn-fresa"> Pedir por WhatsApp</span>
+
+                        <p>Malteada cremosa con delicioso sabor a fresa.</p>
+
+                        <span class="btn-pedir btn-fresa">
+                            Pedir por WhatsApp
+                        </span>
+
                     </div>
+
                 </a>
 
-                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Batido%20Verde%20de%20Espinaca" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                    <div class="card" style="background-color: var(--carta3-color); cursor: pointer;">
-                        <img src="./IMAGENES/Batidos/Batido verde fuerte.jpeg" width="285" height="470" loading="lazy" alt="Batido verde de espinaca">
+                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Batido%20Verde%20de%20Espinaca"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="card"
+                         style="background-color: var(--carta3-color); cursor: pointer;">
+
+                        <img src="./IMAGENES/Batidos/Batido verde fuerte.jpeg"
+                             width="285"
+                             height="470"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Batido verde natural de espinaca">
+
                         <h3>Batido verde de espinaca</h3>
-                        <p>Batido verde natural.</p>
-                        <span class="btn-pedir btn-espinaca"> Pedir por WhatsApp</span>
+
+                        <p>Batido natural preparado con espinaca.</p>
+
+                        <span class="btn-pedir btn-espinaca">
+                            Pedir por WhatsApp
+                        </span>
+
                     </div>
+
                 </a>
 
-                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Salpic%C3%B3n" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                    <div class="card" style="background-color: #ff9800; cursor: pointer;">
-                        <img src="./IMAGENES/Helado/Salpicon especial.jpg" width="285" height="468" loading="lazy" alt="Salpicón de frutas frescas con helado y queso">
+                <a href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20pedir%20un%20Salpic%C3%B3n"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   style="text-decoration: none; color: inherit;">
+
+                    <div class="card"
+                         style="background-color: #ff9800; cursor: pointer;">
+
+                        <img src="./IMAGENES/Helado/Salpicon especial.jpg"
+                             width="285"
+                             height="468"
+                             loading="lazy"
+                             decoding="async"
+                             alt="Salpicón de frutas frescas con queso">
+
                         <h3>Salpicón</h3>
-                        <p>Delicioso salpicón de frutas frescas con helado y queso.</p>
-                        <span class="btn-pedir btn-salpicon"> Pedir por WhatsApp</span>
+
+                        <p>Deliciosa combinación de frutas frescas con queso.</p>
+
+                        <span class="btn-pedir btn-salpicon">
+                            Pedir por WhatsApp
+                        </span>
+
                     </div>
+
                 </a>
 
             </div>
+
         </section>
 
         <br><br>
-    </main>
 
-    <br><br><br>
+        <!-- WAFFLE ESPECIAL -->
+        <br><br><br>
 
-    <section>
-        <main class="waffle">
+        <section class="waffle">
+
             <div class="contenido">
-                <img src="./IMAGENES/Helado/Waffle.jpg" loading="lazy" alt="Waffle con fresas, banano, helado, crema de la casa y chocolate rallado">
+
+                <img src="./IMAGENES/Helado/Waffle.jpg"
+                     loading="lazy"
+                     decoding="async"
+                     alt="Waffle especial con fresas, banano, crema y chocolate">
+
                 <div class="texto">
+
                     <h2>Waffle Especial Con Un Toque Extra De Amor</h2>
+
                     <br>
+
                     <p>
-                        Disfruta de un delicioso waffle cubierto con una mezcla de frutas frescas como fresas, banano,
-                        acompañado de helado, crema de la casa y un toque de chocolate rallado.
-                        Perfecto para satisfacer tus antojos con una explosión de sabores tropicales.
+                        Disfruta de un delicioso waffle cubierto con una
+                        mezcla de frutas frescas como fresas y banano,
+                        acompañado de crema de la casa y un toque de
+                        chocolate rallado.
+
+                        Perfecto para satisfacer tus antojos con una
+                        explosión de sabores tropicales.
                     </p>
+
                 </div>
+
             </div>
-        </main>
-    </section>
 
-    <br><br><br>
+        </section>
 
-    <section>
-        <main class="instragram">
+        <br><br><br>
+
+        <!-- REDES SOCIALES -->
+        <section class="instragram">
+
             <div class="texto">
-                <h2>Mira más antojos en Instagram <a href="https://www.instagram.com/batidos_md/" target="_blank" rel="noopener noreferrer" style="color: var(--carta2-color); text-decoration: none;">@batidos_md</a> y TikTok <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" style="color: var(--carta2-color); text-decoration: none;">@batidosmd</a></h2>
+
+                <h2>
+                    Mira más antojos en Instagram
+
+                    <a href="https://www.instagram.com/batidos_md/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       style="color: var(--carta2-color); text-decoration: none;">
+                        @batidos_md
+                    </a>
+
+                    y TikTok
+
+                    <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       style="color: var(--carta2-color); text-decoration: none;">
+                        @batidosmd
+                    </a>
+
+                </h2>
+
                 <br>
+
             </div>
 
             <div class="contenido-fotos">
-                <a href="https://www.instagram.com/batidos_md/" target="_blank" rel="noopener noreferrer" class="foto-red-link">
-                    <img src="./IMAGENES/RedesSociales/Especial/Plato especial.jpg" class="PE1" loading="lazy" alt="Plato especial de Batidos Antioqueños MD en Instagram">
-                    <span class="overlay-red">Ver en Instagram </span>
+
+                <a href="https://www.instagram.com/batidos_md/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="foto-red-link">
+
+                    <img src="./IMAGENES/RedesSociales/Especial/Plato especial.jpg"
+                         class="PE1"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Preparación especial de Batidos Antioqueños MD">
+
+                    <span class="overlay-red">Ver en Instagram</span>
+
                 </a>
 
-                <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" class="foto-red-link">
-                    <img src="./IMAGENES/RedesSociales/Especial/Neriel.jpg" class="N" loading="lazy" alt="Video de Batidos Antioqueños MD en TikTok">
-                    <span class="overlay-red">Ver en TikTok </span>
+                <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="foto-red-link">
+
+                    <img src="./IMAGENES/RedesSociales/Especial/Neriel.jpg"
+                         class="N"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Contenido de Batidos Antioqueños MD en TikTok">
+
+                    <span class="overlay-red">Ver en TikTok</span>
+
                 </a>
 
-                <a href="https://www.instagram.com/batidos_md/" target="_blank" rel="noopener noreferrer" class="foto-red-link">
-                    <img src="./IMAGENES/RedesSociales/Especial/Plato especial 2.jpg" class="PE2" loading="lazy" alt="Otro plato especial de Batidos Antioqueños MD en Instagram">
-                    <span class="overlay-red">Ver en Instagram </span>
+                <a href="https://www.instagram.com/batidos_md/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="foto-red-link">
+
+                    <img src="./IMAGENES/RedesSociales/Especial/Plato especial 2.jpg"
+                         class="PE2"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Otra preparación especial de Batidos Antioqueños MD">
+
+                    <span class="overlay-red">Ver en Instagram</span>
+
                 </a>
 
-                <a href="https://www.instagram.com/batidos_md/" target="_blank" rel="noopener noreferrer" class="foto-red-link">
-                    <img src="IMAGENES/Helado/Fresas con crema 2.jpg" class="N" loading="lazy" alt="Fresas con crema de Batidos Antioqueños MD en Instagram">
-                    <span class="overlay-red">Ver en Instagram </span>
+                <a href="https://www.instagram.com/batidos_md/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="foto-red-link">
+
+                    <img src="IMAGENES/Helado/Fresas con crema 2.jpg"
+                         class="N"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Fresas con crema de Batidos Antioqueños MD">
+
+                    <span class="overlay-red">Ver en Instagram</span>
+
                 </a>
+
             </div>
-        </main>
-    </section>
 
-    <br><br><br>
+        </section>
 
-    <!-- VISÍTANOS: horario y cómo llegar -->
-    <section class="visitanos" aria-labelledby="visitanos-titulo">
-        <h2 id="visitanos-titulo">Ven por tu antojo a Santa Fé de Antioquia 🍓</h2>
-        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Abrimos todos los días de 2 p. m. a 10 p. m.</p>
-        <div class="visitanos__acciones">
-            <a class="visitanos__btn visitanos__btn--primary" href="./HTML/A-Ubicasion.html">Ver cómo llegar</a>
-            <a class="visitanos__btn visitanos__btn--secondary"
-               href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido"
-               target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-        </div>
-    </section>
+        <br><br><br>
+
+        <!-- VISÍTANOS -->
+        <section class="visitanos" aria-labelledby="visitanos-titulo">
+
+            <h2 id="visitanos-titulo">
+                Ven por tus batidos y antojos a Santa Fe de Antioquia 🍓
+            </h2>
+
+            <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                Abrimos todos los días de 2 p. m. a 10 p. m.
+            </p>
+
+            <div class="visitanos__acciones">
+
+                <a class="visitanos__btn visitanos__btn--primary"
+                   href="./HTML/A-Ubicasion.html">
+                    Ver cómo llegar
+                </a>
+
+                <a class="visitanos__btn visitanos__btn--secondary"
+                   href="https://api.whatsapp.com/send?phone=573194845289&text=Hola,%20me%20gustar%C3%ADa%20hacer%20un%20pedido"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Pedir por WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+        <br><br>
+
+        <!-- RESEÑAS DE GOOGLE -->
+        <section class="resenas-section">
+
+            <h2 class="titulo-resenas">
+                Clientes felices lo cuentan en Google ⭐
+            </h2>
+
+            <div class="resenas-container">
+
+                <div class="resena-card">
+
+                    <div class="resena-header">
+
+                        <div class="avatar-nicolas">N</div>
+
+                        <div class="usuario-info">
+                            <h3>Nicolas Mejia</h3>
+                            <span class="badge-guide">Local Guide</span>
+                        </div>
+
+                    </div>
+
+                    <div class="estrellas"
+                         role="img"
+                         aria-label="5 de 5 estrellas">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="comentario">
+                        "Excelente atención, productos y variedad."
+                    </p>
+
+                </div>
+
+                <div class="resena-card">
+
+                    <div class="resena-header">
+
+                        <div class="avatar-daniela">D</div>
+
+                        <div class="usuario-info">
+                            <h3>Daniela Moncada</h3>
+                            <span class="badge-guide">Local Guide</span>
+                        </div>
+
+                    </div>
+
+                    <div class="estrellas"
+                         role="img"
+                         aria-label="5 de 5 estrellas">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="comentario">
+                        "Excelentísima atención. De verdad muy amables
+                        y tienen de todo y todo es buenísimo.
+                        Los batidos los puedes armar a tu gusto..."
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="google-callout">
+
+                <a href="https://g.page/r/CTd82qSPm7pBEBM/review"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-google-opinion">
+
+                    👉 ¡Déjanos tu opinión o lee más reseñas en Google Maps!
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <br><br>
 
-    <!-- RESEÑAS DE GOOGLE -->
-    <section class="resenas-section">
-        <h2 class="titulo-resenas">Clientes felices lo cuentan en Google ⭐</h2>
+    <!-- PIE DE PÁGINA -->
+    <footer>
 
-        <div class="resenas-container">
-            <div class="resena-card">
-                <div class="resena-header">
-                    <div class="avatar-nicolas">N</div>
-                    <div class="usuario-info">
-                        <h3>Nicolas Mejia</h3>
-                        <span class="badge-guide">Local Guide</span>
-                    </div>
-                </div>
-                <div class="estrellas" role="img" aria-label="5 de 5 estrellas">⭐⭐⭐⭐⭐</div>
-                <p class="comentario">"Excelente atención, productos y variedad."</p>
-            </div>
+        <p>
+            &copy; 2026 BATIDOS ANTIOQUEÑOS MD.
+            Todos los derechos reservados.
+        </p>
 
-            <div class="resena-card">
-                <div class="resena-header">
-                    <div class="avatar-daniela">D</div>
-                    <div class="usuario-info">
-                        <h3>Daniela Moncada</h3>
-                        <span class="badge-guide">Local Guide</span>
-                    </div>
-                </div>
-                <div class="estrellas" role="img" aria-label="5 de 5 estrellas">⭐⭐⭐⭐⭐</div>
-                <p class="comentario">"Excelentísima atención. De verdad muy amables y tienen de todo y todo es buenísimo. Los batidos los puedes armar a tu gusto..."</p>
-            </div>
-        </div>
+        <br>
 
-        <div class="google-callout">
-            <a href="https://g.page/r/CTd82qSPm7pBEBM/review" target="_blank" rel="noopener noreferrer" class="btn-google-opinion">
-                👉 ¡Déjanos tu opinión o lee más reseñas en Google Maps!
+        <p>
+            Teléfono:
+            <a href="tel:+573194845289">+57 319 484 5289</a>
+
+            |
+
+            Contacto:
+            <a href="mailto:batidosantioquenosmd@gmail.com">
+                batidosantioquenosmd@gmail.com
             </a>
-        </div>
-    </section>
+        </p>
 
-    <br><br>
+        <br>
 
-    <section>
-        <footer>
-            <p>&copy; 2026 BATIDOS ANTIOQUEÑOS MD. Todos los derechos reservados.</p>
-            <br>
-            <p>Teléfono: <a href="tel:+573194845289">+57 319 484 5289</a> | Contacto: <a href="mailto:batidosantioquenosmd@gmail.com">batidosantioquenosmd@gmail.com</a></p>
+        <div class="redes-sociales">
 
-            <br>
+            <div class="i">
 
-            <div class="redes-sociales">
-                <div class="i">
-                    <a href="https://wa.me/573194845289" target="_blank" rel="noopener noreferrer"><img src="./IMAGENES/RedesSociales/icons8-whatsapp-50.png" width="35" height="35" alt=""> WhatsApp</a>
-                </div>
-                <div class="i">
-                    <a class="facebook" href="https://www.facebook.com/profile.php?id=61558666632452" target="_blank" rel="noopener noreferrer"><img src="./IMAGENES/RedesSociales/facebook.png" width="35" height="35" alt=""> Facebook</a>
-                </div>
-                <div class="i">
-                    <a href="https://www.instagram.com/batidos_md/" target="_blank" rel="noopener noreferrer"><img src="./IMAGENES/RedesSociales/instagram.png" width="35" height="35" alt=""> Instagram</a>
-                </div>
-                <div class="i">
-                    <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer"><img src="./IMAGENES/RedesSociales/tik-tok.png" width="35" height="35" alt=""> TikTok</a>
-                </div>
+                <a href="https://wa.me/573194845289"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./IMAGENES/RedesSociales/icons8-whatsapp-50.png"
+                         width="35"
+                         height="35"
+                         alt="">
+
+                    WhatsApp
+
+                </a>
+
             </div>
-        </footer>
-    </section>
 
+            <div class="i">
+
+                <a class="facebook"
+                   href="https://www.facebook.com/profile.php?id=61558666632452"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./IMAGENES/RedesSociales/facebook.png"
+                         width="35"
+                         height="35"
+                         alt="">
+
+                    Facebook
+
+                </a>
+
+            </div>
+
+            <div class="i">
+
+                <a href="https://www.instagram.com/batidos_md/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./IMAGENES/RedesSociales/instagram.png"
+                         width="35"
+                         height="35"
+                         alt="">
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+            <div class="i">
+
+                <a href="https://www.tiktok.com/@batidosmd?is_from_webapp=1&sender_device=pc"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./IMAGENES/RedesSociales/tik-tok.png"
+                         width="35"
+                         height="35"
+                         alt="">
+
+                    TikTok
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
     <script src="./JS/carrusel.js" defer></script>
-    <!-- Vercel Analytics -->
+
+    <!-- VERCEL ANALYTICS -->
     <script defer src="/_vercel/insights/script.js"></script>
 
 </body>
-
 </html>

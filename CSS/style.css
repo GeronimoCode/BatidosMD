@@ -415,7 +415,7 @@ footer {
 /* ---------- MAIN Y TARJETAS ---------- */
 
 main {
-  padding: 20px;
+
   background-color: #fff;
 }
 
@@ -1064,4 +1064,24 @@ footer .redes-sociales {
     opacity: 1;
     transform: none;
   }
+}
+
+
+/* ========================================
+   TÍTULO DEL ENCABEZADO EN TODAS LAS PÁGINAS
+======================================== */
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 21px;
+    }
 }
