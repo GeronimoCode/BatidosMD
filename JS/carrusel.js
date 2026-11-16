@@ -175,12 +175,16 @@ var prefiereMenosMovimiento = window.matchMedia(
     var saveData = navigator.connection &&
         navigator.connection.saveData;
 
-    /* En celular NO se descarga ni se reproduce el video:
-       se queda la imagen del hero (mucho más rápido en PageSpeed). */
-    var esMovil = window.matchMedia("(max-width: 768px)").matches;
+    /* El video también se reproduce en celular, pero NO si la persona
+       tiene activado el ahorro de datos o una conexión muy lenta (2g). */
+    var tipoConexion = navigator.connection &&
+        navigator.connection.effectiveType;
+
+    var conexionMuyLenta = tipoConexion === "slow-2g" ||
+        tipoConexion === "2g";
 
     var reproduccionAutomaticaPermitida =
-        !prefiereMenosMovimiento && !saveData && !esMovil;
+        !prefiereMenosMovimiento && !saveData && !conexionMuyLenta;
 
     function setState(playing) {
 
@@ -304,13 +308,21 @@ var prefiereMenosMovimiento = window.matchMedia(
 
     }
 
+    /* Se espera a que la página cargue y un poco más, así el video
+       nunca compite con la imagen principal ni con el texto. */
+    function iniciarVideoConPausa() {
+
+        setTimeout(iniciarVideo, 1500);
+
+    }
+
     if (document.readyState === "complete") {
 
-        iniciarVideo();
+        iniciarVideoConPausa();
 
     } else {
 
-        window.addEventListener("load", iniciarVideo);
+        window.addEventListener("load", iniciarVideoConPausa);
 
     }
 
