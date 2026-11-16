@@ -308,33 +308,11 @@ var prefiereMenosMovimiento = window.matchMedia(
 
     }
 
-    /* El video arranca cuando la persona toca, desplaza o pulsa una tecla,
-       o como máximo 8 segundos después de cargar la página. Así nunca compite
-       con la imagen principal y PageSpeed no lo cuenta como LCP. */
+    /* Se espera a que la página cargue y un poco más, así el video
+       nunca compite con la imagen principal ni con el texto. */
     function iniciarVideoConPausa() {
 
-        var yaIniciado = false;
-        var eventos = ["scroll", "touchstart", "pointerdown", "keydown"];
-
-        function arrancar() {
-
-            if (yaIniciado) return;
-
-            yaIniciado = true;
-
-            eventos.forEach(function (nombre) {
-                window.removeEventListener(nombre, arrancar);
-            });
-
-            iniciarVideo();
-
-        }
-
-        eventos.forEach(function (nombre) {
-            window.addEventListener(nombre, arrancar, { passive: true });
-        });
-
-        setTimeout(arrancar, 8000);
+        setTimeout(iniciarVideo, 1500);
 
     }
 
