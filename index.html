@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es-CO">
 
@@ -23,19 +22,16 @@
     <!-- ESTILOS -->
     <link rel="stylesheet" href="./CSS/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- FUENTE: solo Arial (viene en el dispositivo, no se descarga nada) -->
 
+    <!-- FONT AWESOME: se carga sin bloquear el renderizado -->
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&family=Playfair+Display:wght@700;800&display=swap">
-
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-    <!-- IMAGEN PRINCIPAL -->
-    <link rel="preload" as="image"
-          href="./IMAGENES/Helado/Brownie helado.jpeg"
-          fetchpriority="high">
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </noscript>
 
     <!-- OPEN GRAPH: FACEBOOK Y WHATSAPP -->
     <meta property="og:type" content="website">
@@ -153,8 +149,10 @@
     <header class="nav">
 
         <a href="/">
+            <!-- CAMBIA width/height por las medidas reales del logo (la proporción evita saltos) -->
             <img src="./IMAGENES/Logos/0Logo (sin fondo).png"
                  width="150"
+                 height="150"
                  class="logo"
                  alt="Logo de Batidos Antioqueños MD">
         </a>
@@ -172,18 +170,26 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-titulo">
 
+      <!-- Imagen principal (LCP): ligera, WebP. SIN loading="lazy" -->
+      <img class="hero__poster"
+           src="./IMAGENES/Hero/hero-480.webp"
+           width="480"
+           height="270"
+           fetchpriority="high"
+           decoding="async"
+           alt="">
+
       <video
         class="hero__video"
         muted
         loop
         playsinline
         preload="none"
-        poster="./IMAGENES/Helado/Brownie helado.jpeg"
         width="1280"
         height="720"
         aria-hidden="true"
         disablepictureinpicture>
-        
+
         <source src="./VIDEO/hero.mp4" type="video/mp4">
     </video>
 
@@ -234,14 +240,19 @@
 
             <div class="carta-local-imagenes">
 
+                <!-- CAMBIA width/height por las medidas reales de cada carta -->
                 <img src="IMAGENES/Carta 1.png"
                      class="carta"
+                     width="1240"
+                     height="1754"
                      loading="lazy"
                      decoding="async"
                      alt="Carta de Batidos Antioqueños MD: batidos, jugos y bebidas">
 
                 <img src="IMAGENES/Carta 2.0.png"
                      class="carta"
+                     width="1240"
+                     height="1754"
                      loading="lazy"
                      decoding="async"
                      alt="Carta de Batidos Antioqueños MD: waffles, sodas, micheladas y copas de helado">
@@ -266,7 +277,9 @@
                     <img src="./IMAGENES/Otros/Soda cereza.jpg"
                          alt=""
                          class="bg-blur"
-                         aria-hidden="true">
+                         aria-hidden="true"
+                         loading="lazy"
+                         decoding="async">
 
                     <img src="./IMAGENES/Otros/Soda cereza.jpg"
                          alt="Soda de cereza preparada en Batidos Antioqueños MD"
@@ -282,7 +295,9 @@
                     <img src="./IMAGENES/Malteadas/Malteadas.jpg"
                          alt=""
                          class="bg-blur"
-                         aria-hidden="true">
+                         aria-hidden="true"
+                         loading="lazy"
+                         decoding="async">
 
                     <img src="./IMAGENES/Malteadas/Malteadas.jpg"
                          alt="Malteadas de diferentes sabores"
@@ -298,7 +313,9 @@
                     <img src="./IMAGENES/Helado/FRutas con crema.jpeg"
                          alt=""
                          class="bg-blur"
-                         aria-hidden="true">
+                         aria-hidden="true"
+                         loading="lazy"
+                         decoding="async">
 
                     <img src="./IMAGENES/Helado/FRutas con crema.jpeg"
                          alt="Frutas frescas con crema"
@@ -314,7 +331,9 @@
                     <img src="./IMAGENES/Otros/cafe especial.jpg"
                          alt=""
                          class="bg-blur"
-                         aria-hidden="true">
+                         aria-hidden="true"
+                         loading="lazy"
+                         decoding="async">
 
                     <img src="./IMAGENES/Otros/cafe especial.jpg"
                          alt="Granizado de café especial"
@@ -330,7 +349,9 @@
                     <img src="./IMAGENES/Helado/Brownie helado.jpeg"
                          alt=""
                          class="bg-blur"
-                         aria-hidden="true">
+                         aria-hidden="true"
+                         loading="lazy"
+                         decoding="async">
 
                     <img src="./IMAGENES/Helado/Brownie helado.jpeg"
                          alt="Brownie de chocolate con acompañamiento cremoso"
@@ -490,6 +511,8 @@
             <div class="contenido">
 
                 <img src="./IMAGENES/Helado/Waffle.jpg"
+                     width="350"
+                     height="600"
                      loading="lazy"
                      decoding="async"
                      alt="Waffle especial con fresas, banano, crema y chocolate">
@@ -557,6 +580,8 @@
 
                     <img src="./IMAGENES/RedesSociales/Especial/Plato especial.jpg"
                          class="PE1"
+                         width="300"
+                         height="250"
                          loading="lazy"
                          decoding="async"
                          alt="Preparación especial de Batidos Antioqueños MD">
@@ -572,6 +597,8 @@
 
                     <img src="./IMAGENES/RedesSociales/Especial/Neriel.jpg"
                          class="N"
+                         width="300"
+                         height="450"
                          loading="lazy"
                          decoding="async"
                          alt="Contenido de Batidos Antioqueños MD en TikTok">
@@ -587,6 +614,8 @@
 
                     <img src="./IMAGENES/RedesSociales/Especial/Plato especial 2.jpg"
                          class="PE2"
+                         width="300"
+                         height="250"
                          loading="lazy"
                          decoding="async"
                          alt="Otra preparación especial de Batidos Antioqueños MD">
@@ -602,6 +631,8 @@
 
                     <img src="IMAGENES/Helado/Fresas con crema 2.jpg"
                          class="N"
+                         width="300"
+                         height="450"
                          loading="lazy"
                          decoding="async"
                          alt="Fresas con crema de Batidos Antioqueños MD">
@@ -765,6 +796,7 @@
                     <img src="./IMAGENES/RedesSociales/icons8-whatsapp-50.png"
                          width="35"
                          height="35"
+                         loading="lazy"
                          alt="">
 
                     WhatsApp
@@ -783,6 +815,7 @@
                     <img src="./IMAGENES/RedesSociales/facebook.png"
                          width="35"
                          height="35"
+                         loading="lazy"
                          alt="">
 
                     Facebook
@@ -800,6 +833,7 @@
                     <img src="./IMAGENES/RedesSociales/instagram.png"
                          width="35"
                          height="35"
+                         loading="lazy"
                          alt="">
 
                     Instagram
@@ -817,6 +851,7 @@
                     <img src="./IMAGENES/RedesSociales/tik-tok.png"
                          width="35"
                          height="35"
+                         loading="lazy"
                          alt="">
 
                     TikTok

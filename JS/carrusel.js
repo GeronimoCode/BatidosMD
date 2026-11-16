@@ -1,4 +1,3 @@
-
 /* ---------- PREFERENCIAS DEL USUARIO ---------- */
 
 var prefiereMenosMovimiento = window.matchMedia(
@@ -176,8 +175,12 @@ var prefiereMenosMovimiento = window.matchMedia(
     var saveData = navigator.connection &&
         navigator.connection.saveData;
 
+    /* En celular NO se descarga ni se reproduce el video:
+       se queda la imagen del hero (mucho más rápido en PageSpeed). */
+    var esMovil = window.matchMedia("(max-width: 768px)").matches;
+
     var reproduccionAutomaticaPermitida =
-        !prefiereMenosMovimiento && !saveData;
+        !prefiereMenosMovimiento && !saveData && !esMovil;
 
     function setState(playing) {
 
@@ -232,6 +235,11 @@ var prefiereMenosMovimiento = window.matchMedia(
         setState(false);
     });
 
+    /* Cuando el video realmente muestra imágenes, aparece sobre la foto */
+    video.addEventListener("playing", function () {
+        video.classList.add("is-playing");
+    });
+
     if (btn) {
 
         btn.addEventListener("click", function () {
@@ -252,41 +260,57 @@ var prefiereMenosMovimiento = window.matchMedia(
 
     if (!reproduccionAutomaticaPermitida) {
 
-        pausarVideo();
+        /* No se llama a play(): así el navegador no descarga el video */
         setState(false);
         return;
 
     }
 
-    if ("IntersectionObserver" in window) {
+    /* El video se pide solo cuando la página ya terminó de cargar,
+       para que no compita con la imagen principal (LCP). */
+    function iniciarVideo() {
 
-        var observadorVideo = new IntersectionObserver(function (entradas) {
+        if ("IntersectionObserver" in window) {
 
-            entradas.forEach(function (entrada) {
+            var observadorVideo = new IntersectionObserver(function (entradas) {
 
-                if (entrada.isIntersecting) {
+                entradas.forEach(function (entrada) {
 
-                    if (!document.hidden) {
-                        reproducirVideo();
+                    if (entrada.isIntersecting) {
+
+                        if (!document.hidden) {
+                            reproducirVideo();
+                        }
+
+                    } else {
+
+                        pausarVideo();
+
                     }
 
-                } else {
+                });
 
-                    pausarVideo();
-
-                }
-
+            }, {
+                threshold: 0.1
             });
 
-        }, {
-            threshold: 0.1
-        });
+            observadorVideo.observe(video);
 
-        observadorVideo.observe(video);
+        } else {
+
+            reproducirVideo();
+
+        }
+
+    }
+
+    if (document.readyState === "complete") {
+
+        iniciarVideo();
 
     } else {
 
-        reproducirVideo();
+        window.addEventListener("load", iniciarVideo);
 
     }
 
