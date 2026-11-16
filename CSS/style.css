@@ -42,52 +42,95 @@ img {
 /* ---------- BOTÓN FLOTANTE DE WHATSAPP ---------- */
 
 .float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.float:hover {
-  text-decoration: none;
-  color: #fff;
-  background-color: #1ab152;
-  animation: shake 1s infinite;
-}
+/* Icono de WhatsApp */
 
 .my-float {
-  margin-top: 16px;
+    line-height: 1;
 }
 
-.pulse {
-  animation: pulse-animation 2s infinite;
+/* Efecto al pasar el cursor */
+
+.float:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1ab152;
+    transform: scale(1.08);
 }
 
-/* Corregido: el 0% tenía dos colores seguidos y el navegador lo ignoraba */
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-  }
+/* Animación de pulso optimizada */
+
+.float.pulse {
+    isolation: isolate;
 }
 
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(5px); }
-  50% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
+.float.pulse::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid rgba(37, 211, 102, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: pulse-optimizado 2s ease-out infinite;
 }
+
+@keyframes pulse-optimizado {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.65);
+        opacity: 0;
+    }
+}
+
+/* Accesibilidad: menos movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .float.pulse::before {
+        animation: none;
+    }
+
+    .float,
+    .float:hover {
+        transition: none;
+        transform: none;
+    }
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    .float {
+        width: 55px;
+        height: 55px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 27px;
+    }
+}
+
 
 /* ---------- HEADER Y NAVEGACIÓN ---------- */
 
