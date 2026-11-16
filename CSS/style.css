@@ -10,7 +10,7 @@
   --carta9-color: #93437d;
 
   /* Letra de títulos: Playfair Display en peso 800 (si no carga, usa Times New Roman) */
- --font-titulos: "Nunito", "Arial Rounded MT Bold", sans-serif;
+  --font-titulos: "Nunito", "Arial Rounded MT Bold", sans-serif;
 }
 /* ---------- BASE ---------- */
 
@@ -214,158 +214,169 @@ header .h1 {
 /* ---------- HERO CON VIDEO DE FONDO ---------- */
 
 .hero {
-  /* Para cambiar la letra del título, cambia solo esta línea (ver nota en la respuesta) */
-  --hero-font: var(--font-titulos);
-  --hero-next-bg: #fee5f0; /* color de lo que viene debajo (el fondo del body), para la curva */
+    /* Para cambiar la letra del título, cambia solo esta línea */
+    --hero-font: var(--font-titulos);
+    --hero-next-bg: #fee5f0;
 
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: min(88vh, 760px);
-  overflow: hidden;
-  background: #3b2314; /* color mientras carga el video */
-  color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: min(88vh, 760px);
+    overflow: hidden;
+    background: #3b2314;
+    color: #fff;
 }
 
 .hero__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 /* Capa oscura para que el texto blanco siempre se lea sobre el video */
+
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(35, 15, 6, 0.72) 0%, rgba(35, 15, 6, 0.25) 70%, rgba(35, 15, 6, 0.1) 100%);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(35, 15, 6, 0.72) 0%,
+        rgba(35, 15, 6, 0.25) 70%,
+        rgba(35, 15, 6, 0.1) 100%
+    );
+    z-index: 1;
 }
 
-/* Borde inferior curvo, como en tu referencia */
+/* Borde inferior curvo */
+
 .hero::after {
-  content: "";
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  bottom: -1px;
-  height: 60px;
-  background: var(--hero-next-bg);
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  z-index: 3;
+    content: "";
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: -1px;
+    height: 60px;
+    background: var(--hero-next-bg);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    z-index: 3;
 }
 
 .hero__body {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.2rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem clamp(1.25rem, 6vw, 4rem) 5rem;
-  text-align: left;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem clamp(1.25rem, 6vw, 4rem) 5rem;
+    text-align: left;
 }
 
 .hero__title {
-  max-width: 16ch;
-  font-family: var(--hero-font);
-  font-size: clamp(2.3rem, 5.6vw, 4.4rem);
-  line-height: 1.05;
-  font-weight: 800; /* letra gruesa */
-  text-wrap: balance;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-  color: #fff;
+    max-width: 16ch;
+    font-family: var(--hero-font);
+    font-size: clamp(2.3rem, 5.6vw, 4.4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    text-wrap: balance;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    color: #fff;
 }
 
 .hero__text {
-  max-width: 40ch;
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  line-height: 1.5;
-  font-weight: 700;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    max-width: 40ch;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.5;
+    font-weight: 700;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero__hours {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.18);
-  font-size: 0.95rem;
-  font-weight: 800;
-  text-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-shadow: none;
 }
 
 .hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .hero__btn {
-  display: inline-block;
-  padding: 0.85rem 1.6rem;
-  border: 2px solid transparent;
-  border-radius: 25px;
-  font-weight: 800;
-  text-decoration: none;
-  text-shadow: none;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    display: inline-block;
+    padding: 0.85rem 1.6rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    text-shadow: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero__btn--primary {
-  background: var(--carta2-color);
-  color: #2b1a12;
+    background: var(--carta2-color);
+    color: #2b1a12;
 }
 
 .hero__btn--primary:hover {
-  background: var(--carta1-color);
+    background: var(--carta1-color);
 }
 
 .hero__btn--secondary {
-  border-color: #fff;
-  color: #fff;
+    border-color: #fff;
+    color: #fff;
 }
 
 .hero__btn--secondary:hover {
-  background: #fff;
-  color: var(--carta5-color);
+    background: #fff;
+    color: var(--carta5-color);
 }
 
 .hero a:focus-visible,
 .hero button:focus-visible {
-  outline-color: #fff;
+    outline-color: #fff;
 }
 
-
 @media (max-width: 768px) {
-  .hero {
-    min-height: 78vh;
-  }
 
-  .hero::before {
-    background: linear-gradient(0deg, rgba(35, 15, 6, 0.75) 0%, rgba(35, 15, 6, 0.35) 100%);
-  }
+    .hero {
+        min-height: 78vh;
+    }
 
-  .hero__body {
-    padding: 2.5rem 1.25rem 5rem;
-  }
+    .hero::before {
+        background: linear-gradient(
+            0deg,
+            rgba(35, 15, 6, 0.75) 0%,
+            rgba(35, 15, 6, 0.35) 100%
+        );
+    }
 
-  .hero::after {
-    height: 40px;
-  }
+    .hero__body {
+        padding: 2.5rem 1.25rem 5rem;
+    }
 
-  .hero__toggle {
-    bottom: 3.2rem;
-  }
+    .hero::after {
+        height: 40px;
+    }
+
+    .hero__toggle {
+        bottom: 3.2rem;
+    }
 }
 
 /* ---------- TÍTULOS ---------- */
